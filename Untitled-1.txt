@@ -1,0 +1,311 @@
+Documentação:
+
+Uusuarios gerais podem apenas ver o que esta cadastrado
+
+Admin vai logar e ter acesso de cadastro, edição e remoção de noticias, programação da semana,  cadastro de membros, gestão da galeria de fotos
+
+Para noticias : é possivel colocar imagem, data, titulo e descrição
+Para progração da semana : apenas o dia da semana e a descrição
+Para galeria : criar pasta com data, imagem de capa, e titulo, 
+dentro da pasta colocar as imagens podendo incluir varias e remover.
+
+cadastro de membros: nome, cpf, email, endereço, data de nascimento, data de conversão, data de batismo, data de aliado a membro (transferencia), ministerio que faz parte (sendo um select que permite selecionar ou cadastrar novos ministerios), telefone, contato de emergencia, laudos medicos, sexo 
+painel com os aniversariantes do mes 
+
+
+texto declaração de fe :
+
+VISÃO INTRODUTÓRIA
+
+Boa vindas:
+Que bom ter você aqui com a gente. É uma alegria imensa saber do seu interesse em mergulhar na Declaração de Fé da Igreja do Evangelho Quadrangular.
+Esta apostila foi feita com muito carinho para ser um guia nessa jornada. Mais do que um simples documento, ela é um convite para você conhecer e se aprofundar nos pilares da nossa fé, no que acreditamos e no que nos move como igreja.
+Esperamos que cada página seja uma fonte de inspiração, conhecimento e, principalmente, um fortalecimento da sua fé em Deus.
+Que a leitura seja abençoada!
+
+
+
+DENOMINAÇÃO
+Quadrangular é um termo bíblico usado para o Tabernáculo, no livro de Exodo; para o Templo do Senhor, em Ezequiel 40:47; e para o Céu, no livro de Apocalipse. O termo "Evangelho Quadrangular" foi dado à fundadora Aimée Semple McPherson em inspiração pelo avivamento, durante uma campanha evangelística em Oakland, Califórnia, no ano de 1922, enquanto pregava sobre a visão de Ezequiel (Ez 1: 1-10). "Evangelho Quadrangular" representa aquilo que é igualmente equilibrado por todos os lados, estabelecido e resistente. Tal confiança no poder do evangelho é expressa em Hebreus 13:8, o que é apresentado nas igrejas quadrangulares como "Jesus Cristo é o mesmo ontem, hoje e será eternamente".
+O termo ainda representa os 4 pilares do ministério de Jesus na Terra:
+QUATRO ROSTOS
+1 - Rosto de Homem: Simboliza Jesus Cristo filho do homem, como salvador que foi sacrificado por nós.
+2 - Rosto de Leão: Simboliza Jesus Cristo, como batizador no Espírito Santo, porque representa força e poder.
+3 - Rosto de Boi: Simboliza um animal suportador de cargas, Jesus veio para levar sobre Ele toda a carga de pecados, vergonha e doenças.
+4 - Rosto de Águia: Simboliza o rei dos pássaros, como Jesus simboliza o rei que há de vir.
+QUATRO CORES
+1 - Vermelho: Simboliza o sangue de Cristo que foi derramado na Cruz para nos trazer Salvação.
+2 - Amarelo: Simboliza o batismo no Espírito Santo.
+3 - Azul: Simboliza a cura divina.
+4 - Roxo: Simboliza a volta do Rei Jesus.
+QUATRO SÍMBOLOS
+1 - Cruz: Simboliza a morte de Cristo, para nos dar a Salvação.
+2 - Pomba: Simboliza o batismo no Espírito Santo.
+3 - Cálice: Simboliza a cura divina.
+4 - Coroa: Simboliza a volta de Cristo para reinar eternamente.
+
+QUATRO EVANGELHOS NO NOVO TESTAMENTO
+1 - Mateus: Mateus escreveu este livro para os Hebreus que há esperavam pelo Messias que viria para reinar eternamente. Por isso, o evangelista apresenta Jesus como Rei que há de vir para buscar a igreja.
+2 - Marcos: Marcos escreveu este livro aos romanos, que era um povo militar tinha orgulho em obedecer a seus superiores, destacando Jesus como servo diante de Deus para tomar sobre si as nossas dores.
+3 - Lucas: Lucas escreveu este livro aos Gregos, um povo cujo ideal era o homem perfeito Então apresenta Jesus como filho do homem, perfeito, corpo, alma e espírito, veio para buscar o que se havia perdido.
+4 - João: João escreveu este livro para todos os cristãos apresentando Jesus como filho de Deus o único que pode batizar com o Espírito Santo.
+
+
+
+I. AS SAGRADAS ESCRITURAS
+Cremos que a Bíblia Sagrada é a
+ (1) Palavra do Deus Vivo; Verdadeira, imutável, firme, inabalável, como seu autor, o Senhor Jeová; que foi escrita por santos homens do passado,
+(2)conforme eram movidos pelo Espírito Santo e por Ele inspirados; que ela é uma
+(3)lâmpada acesa para guiar um mundo perdido, desde as profundezas do pecado e tristeza até as elevações da honradez e da glória; um espelho claro que revela a face de um Salvador crucificado; um prumo a tornar reta a vida de cada indivíduo ou comunidade; uma 
+(4) afiada espada de dois gumes para convencer do pecado e maldade; um forte elo de amor e ternura para levar os arrependidos a Cristo Jesus; um bálsamo, sob o sopro do
+ (5) Espírito Santo, que pode curar e vivificar todo o coração desfalecente; único sustentáculo verdadeiro da comunhão e unidade cristã.
+(6) Apelo de amor de um Deus infinitamente amantíssimo; advertência solene, trovejar distante da tempestade e da ira e retribuição que caira sobre os desatentos; uma
+(7) seta apontada para o céu; um sinal de perigo que adverte quanto ao inferno,
+(8) o divino, supremo e eterno tribunal por cujos padrões todos os homens, nações, credos e argumentos serão julgados 
+
+Referências Bíblicas
+1. Havendo Deus antigamente falado muitas vezes, e de muitas maneiras, aos pajs, pelos profetas... (Hebreus 1:1).
+Porque a profecia nunca foi produzida por vontade dos homens, mas os homens da parte de Deus falaram movidos pelo Espírito Santo.( II Pedro 1:21).
+3. Lâmpada para meus pés é a tua palavra, e luz para o meu caminho. (Salmos 119:105).
+4. Porque a palavra de Deus é viva e eficaz, e mais cortante do que qualquer espada de dois gumes, e penetra até a divisão de alma e espírito, e de juntas e medulas, e é apta para discernir os pensamentos e intenções do coração. (Hebreus 4:12).
+5. Tomai também o capacete da salvação, e a espada do Espírito, que é a palavra de Deus; ( Efésios 6:17).
+6. Toda escritura é divinamente inspirada e proveitosa para ensinar, para repreender, para corrigir, para instruir em justiça; ( II Timóteo 3:16).
+Quem subirá ao monte do Senhor, ou quem estará no lugar santo? Aquele que é limpo de mãos e puro de coração; que não entrega a sua alma à vaidade, nem jura enganosamente. Este receberá do Senhor uma bênção, e a justiça do Deus da sua salvação. (salmos 24:3-5).
+7. Escondi a tua palavra no meu coração, para não pecar contra ti, (salmos 119:11).
+8. Mas que diz? A palavra está perto de ti, na tua boca e no teu coração; isto é a palavra da fé, que pregamos. Porque, se com tua boca confessares a Jesus como Senhor, e em teu coração creres que Deus o ressuscitou dentre os mortos, será salvo; pois é com o coração que se crê para a justiça, e com a boca se faz confissão para a salvação. Porque a Escritura diz: Ninguém que nele crê será confundido. (Romanos 10:8-11).
+9. Bem-aventurado aquele que lê e bem-aventurados os que ouvem as palavras desta profecia e guardam as coisas que nela estão escritas; porque o tempo está próximo. (Apocalipse 1:3)
+
+
+2 2. A DIVINDADE ETERNA
+Cremos que só há 
+(1) um Deus vivo e verdadeiro: 
+(2) autor do céu e da terra e tudo o que neles há; o alfa e o ômega; que sempre foi, é, e será pelos tempos sem fim, amém; que ele é infinitamente santo, poderoso, terno, amoroso e glorioso; 
+(3) digno de todo amor e honra e obediência, majestade, domínio e poder, assim agora e para sempre; e que a unidade da Divindade se constitui triplicemente em consonância perfeita, executando funções distintas mas harmoniosas, no grande trabalho da redenção:
+A) O Pai - (4)Cuja glória é tão indescritível que o homem mortal não pode contemplar Sua face e ainda viver, mas, cujo coração foi tão transbordante de amor e piedade pelos homens perdidos e vítimas do pecado que, (5)Ele, voluntariamente, deu Seu Filho Unigênito, para redimí-los e reconciliá-los consigo mesmo.
+B) O Filho - (6)Co-existente e Co-eterno com o Pai que, (7)concebido pelo Espírito Santo e nascido da Virgem Maria, (8)assumiu a forma de homem, suportou nossos pecados, e levou nossas tristezas e, pelo derramamento de Seu precioso sangue sobre a cruz do calvário, adquiriu a redenção para todos os que n'Ele creiam; então, (9)quebrando os grilhões da morte e do inferno levantou-se da sepultura e subiu às alturas levando cativo o cativeiro, para que, como o (10)grande Mediador entre Deus e o homem, pudesse estar à direita do Pai intercedendo por aqueles por quem entregou a sua vida.
+C) O Espírito Santo - (11)A terceira Pessoa da Divindade, o Espírito do Pai derramado, Oniciente, Onipotente, Onipresente, realizando uma missão indizivelmente importante sobre a terra (12)convencendo de pecado, de justiça e de juízo, levando pecadores ao Salvador, rogando, buscando, confortando, guiando, vivificando, glorificando, selando, enchendo ungindo, batizando e revestindo de (13)poder do alto a todos àqueles que se entregam às suas sagradas ministrações, preparando-os para o grande dia do aparecimento do Senhor.
+Referências Bíblicas
+Respondeu Jesus: O primeiro é: Ouve, Israel, o senhor nosso Deus é o único Senhor. (Marcos 12:29). Ao que lhe disse o escriba: Muito bem, Mestre; com verdade disseste que ele é um, e fora dele não há outro; (Marcos 12:32.)
+Assim diz o Senhor: Rei de Israel, seu Redentor, o Senhor dos exércitos: Eu sou o primeiro e Eu sou o último e além de mim não há deus. (Isaías 44:6.)
+2. Porque nele foram criadas todas as coisas nos céus e na terra, as visíveis e as invisíveis, sejam tronos, sem dominações, sem principados, sejam potestades; tudo foi criado por ele e para ele.( Col 1:16). Antes que nascessem montes, ou que tivesses formado a terra e o mundo, sim, de eternidade a eternidade tu és Deus. (SI 90:2). Eu sou o Alfa e o Ômega, diz o Senhor Deus, aquele que é, e que era, e que há de vir, o Todo-poderoso. (Apc 1:8).
+3. Os quatro seres vivente tinham, cada um seis asas, e ao redor e por dentro estavam cheios de olhos; e não têm descanso nem de noite, dizendo: Santo, Santo é o Senhor Deus, Todo-Poderoso, aquele que era, e que é, e que há de vir. (Apc. 4:8.)
+4. É disse mais: Não poderá ver a minha face, porquanto homem
+nenhum pode ver a minha face e viver.( Ex 33:20).
+5. Porque Deus amou o mundo de tal maneira que deu seu Filho unigênito, para que todo aquele que nele crê não pareça, mas tenha a vida eterna. (Jo 3:16.)
+No principio era o Verbo, e o Verbo estava com Deus, e o Verbo era
+Deus. Jo 1:1 Respondeu - lhe Jesus: Em verdade, em verdade vos digo que antes que Abraão existente, eu sou. (Jo. 8:58.)
+7. E, projetando ele isso, eis que em sonho lhe apareceu um anjo do Senhor, dizendo: José, filho de Davi, não temas receber a Maria, tua mulher, pois o que nela se gerou é do Espírito é do Espírito Santo; (Mt.1:20.)
+8. Verdadeiramente ele tomou sobre si as nossas enfermidades, e carregou com as nossas dores; e nós o reputávamos por aflito, ferido de Deus, e oprimido. Mas ele foi ferido por causa das nossas transgressões, e esmagado por causa das nossas iniqüidades; o castigo que nos traz a paz estava sobre ele, e pelas suas pisaduras fomos sarados. (Isaias 53:4-5.)
+9. e o que vivo: fui morto, mas eis aqui estou vivo pelo séculos dosséculos; e tenho as chaves da morte e do inferno. (Apoc. 1:18.)
+10. Mas o fim desta admoestação é o amor que procede de um coração puro, de uma boa consciência, e de uma fé não fingida;( I Tim 1:5.)
+11. E o Espírito é o que dá testemunho, porque o Espírito é a verdade.( IJo 5:7.)
+12. Quando vier o Consolador, que eu vos enviarei da parte do Pai, oEspírito da verdade, que do Pai procede, esse dará testemunho de mim;(Jo 15:26. )E quando ele vier, convencerá o mundo do pecado, da justiça e do juízo;( Jo 16:8.)
+13. Mas recebereis poder, ao descer sobre vós o Espírito Santo, e ser-me- eis testemunhas, tanto em Jerusalém, como em toda a Judéia e Samária, e até os confins da terra. (Atos 1:8.)
+
+3. A QUEDA DO HOMEM
+Cremos que o homem foi (1) criado à imagem de Deus, diante de quem Ele andava em santidade e pureza mas que, por voluntária (2) desobediência e transgressão, caiu da pureza e da inocência do Éden às profundezas do pecado e iniquidade, e que, em consequências disso,
+(3) toda humanidade é constituída de pecadores vendidos a Satanás - (4) pecadores por escolha, caracterizados pela iniquidade e inteiramente desprovidos por natureza, daquela santidade exigida pela lei de Deus, decididamente inclinados ao mal, (5) culpados e sem justificativa, justamente merecendo a condenação de um Deus justo e Santo.
+Referências Bíblicas
+1. Criou, pois, Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou.( Gen 1:27.)
+2. Porque, assim como pela desobediência de um só homem muitos foram constituídos pecadores, assim também pela obediência de um muitos serão constituídos justos.( Rom 5:19.)
+3. Portanto, assim como por um só homem entrou o pecador no mundo, e pelo pecado a morte, assim também a morte passou a todos os homens, porquanto todos pescaram. (Rom 5:12.)
+4, Eis que eu nasci em iniquidade, e em pecado me concebeu minha mãe. (SI 51:5.)
+5. 5. Pois os seus atributos invisíveis, o seu eterno poder e divindade, são claramente vistos desde a criação do mundo, sendo percebidos mediante as coisas criadas, de modo que eles são inescusáveis; (Rom 1:20.)
+
+4. O PLANO DE REDENÇÃO
+Cremos, que
+ (1) sendo nós pecadores,Cristo morreu por nós - o Justo pelo (2) injusto -
+espontaneamente, e por eleição do Pai, tomando o lugar de pecadores, levando nossos pecados, recebendo nossa condenação, morrendo nossa morte, (3) pagando inteiramente nossas faltas, e assinando, com o sangue de sua vida, o perdão de todos aqueles que haveriam de n'Ele crer; que, (4) simplesmente pela fé, a aceitação da expiação adquirida no Monte do Calvário, (5) o mais vil pecador pode ser limpo de suas iniquidades e tornado mais branco do que a neve.
+Referências Bíblicas
+1. Ele foi ferido pelas nossas transgressões, e moído pelas nossas iniqüidade; o castigo que nos traz a paz estava sobre ele, e pelas suas pisadura fomos sarados.( Is. 53:5.)
+2. O qual se deu a si mesmo por nós para nos remir de toda a iniquidade, e purificar para si um povo seu especial, zeloso de boas obras.(Tt, 2:14.)
+3. E cantavam um cântico novo, dizendo: Digno és de tomar o livro, e de abrir os seus selos; porque foste morto, e com o teu sangue compraste para Deus homens de toda tribo, e língua, e povo e nação; (Apc 5:9.)
+4. Porque pela graça sois salvos, por meio da fé e isto vem de vós; é dom de Deus; (Efésios 2:8.)
+5. Vinde então, e argüi-me, diz o senhor: ainda que os vossos pecados sejam vermelhos como o carmesim, se tornarão como a branca lã. (Isaías1:18.)
+5. SALVAÇÃO PELA GRAÇA
+Cremos que a (1) salvação dos pecadores é inteiramente pela graça, que não temos justiça alguma ou bondade em nós mesmos, por onde procurar o divino amparo, havendo que (2) lançarmo-nos, portando, à inabalável misericórdia e amor daquele que nos comprou e nos lavou no seu próprio sangue, (3) clamando os méritos e a justiça de Cristo o Salvador, firmados na sua palavra e (4) aceitando o livre dom de seu amor e perdão.
+Referências Biblicas
+1. Deus, porém, rico em misericórdia, pelo grande amor com que nos amou, e estando nós morto por nossos pecados, deu-nos vida por Cristo - pela graça fostes salvos! (Ef 2:45). Pela graça sois salvos. (Ef. 2:8.)
+De agora em diante, pois, já não há condenação alguma paraaqueles que estão em Jesus Cristo.( Rm 8:1.)
+3. Eu vivo, mas já não sou eu, é Cristo que vive em mim. Minha vida presente na carne, eu a vivo pela fé no Filho de Deus, que me amou e se entregou por mim. (Gal 2;20.)
+4. Pois o salário do pecado é a morte, enquanto a graça de Deus é avida eterna em Jesus Cristo Nosso Senhor.( Rm. 6:23.)
+
+
+ 6. ARREPENDIMENTO E ACEITAÇÃO
+Cremos que, (1)pelo sincero arrependimento, verdadeira tristeza pelo pecado, e verdadeira aceitação do coração para com o Senhor Jesus Cristo, aqueles que O invocam (2)são justificados pela fé, através do seu precioso sangue e que, (3)em vez da condenação, (4)obtém a mais bendita paz, segurança e amparo com Deus; que, com braços abertos de perdão e misericórdia o Salvador espera para receber, em contrição não fingida e (5)súplica por misericórdia todo arrependido que queira abrir a porta do seu coração e aceitá-lo como Senhor e Rei.
+Referências Biblicas
+1. Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça. I Jo. 1:9.
+Sendo, pois, justificados pela fé, temos paz com Deus, por nosso Senhor Jesus Cristo; pelo qual também temos entrada pela fé a esta graça, na qual estamos firmes e nos gloriamos na esperança da glória deDeus. Rm. 5:1,2.
+3. Portanto, agora nenhuma condenação há para os que estão em Cristo Jesus, que não andam segundo a carne, mas segundo o Espírito. Rm. 8:1.
+4. Para dar ao seu povo conhecimento da salvação na remissão dos seus pecados, pelas entranhas da misericórdia do nosso Deus, com que o oriente do alto nos visitou, para alumiar aos que estão assentados em trevas e sombra de morte, a fim de dirigir os nossos pés pelo caminho de paz. Lc. 1:77-79.
+E o que vem a mim, de maneira nenhuma eu o lançarei fora. Jo.6:37.
+
+7. O NOVO NASCIMENTO
+Cremos que a mudança que se efetua no coração e na vida, por ocasião da conversão, é absolutamente real; (1)que o pecador é então nascido de novo, de maneira gloriosa e transformadora tal, (2)que as coisas velhas são passadas e tudo se faz novo; de tal modo que coisas anteriores desejadas são agora desprezadas, (3)enquanto coisas outrora aborrecidas são agora respeitadas e sagradas; e que tendo sido agora (4)a ele imputada a justiça do redentor e recebido do Espírito de Cristo, novos desejos, novas aspirações, novos interesses e uma nova perspectiva da vida, do tempo e da eternidade, enchem o coração lavado no sangue, (5)de modo tal que o seu desejo se torna, agora, abertamente confessar e servir ao Mestre, sempre procurando as coisas que são de cima.
+Referências Bíblicas
+1. Não te admires de eu ter dito: necessário é nascer de novo, Jo 3:7.
+2. Assim que, se alguém está em Cristo, nova criatura é: as coisasvelhas já passaram; eis que tudo se fez novo. II Co. 5:17.
+3. Se vós fosseis do mundo, o mundo amaria o que era seu mas, porque não sois do mundo, por isso é que o mundo vos aborrece. Jo.15:19.
+
+Já estou crucificado com Cristo: e vivo, não mais eu, mas cristo vive em mim: e a vida que agora vivo na carne vivo-a na fé do Filho de Deus, o qual me amou e se entregou a si mesmo por mim. Gl. 2:20
+ Sendo justificados gratuitamente pela sua graça, pela redenção que há em Cristo Jesus. Ao qual Deus propôs para propiciação pela fe no seu sangue, para demonstrar a sua justiça pela remissão dos pecados dantes cometidos, sob a paciência de Deus. Rm. 3: 24,25
+Bem-aventurado o varão que não anda segundo o conselho dos ímpios, e nem se detém no caminho dos pecadores, nem se assenta na roda dos escarnecedores.Antes tem o seu prazer na lei do Senhor, e na sua lei medita de dia e de noite. SI. 1:1,2
+
+8. VIDA CRISTÃ DIÁRIA
+Cremos que, tendo sido limpos pelo precioso sangue de Jesus Cristo e, tendo recebido o testemunho do Espírito Santo na conversão, é desejo de Deus que nos santifiquemos diariamente e, nos tornemos participantes de sua santidade crescendo constantemente, cada vez mais fortes na fé, poder, oração, amor e serviço; primeiramente, como crianças desejando leite não falsificado, neste mundo; depois como homens fortes vestindo toda a armadura de Deus, marchando avante para novas conquistas em seu nome, ao abrigo do seu estandarte de sangue; vivendo sempre uma vida paciente, sóbria, não egoísta, segundo Deus, a qual representa um verdadeiro reflexo de Cristo em nós.
+Onde é ensinado nas Escrituras
+Porque esta é a vontade de Deus, a vossa santificação. I Ts. 4:3. E o mesmo Deus de paz vos santifique em tudo, e todo o vosso espírito e alma e corpo sejam plenamente conservados irrepreensíveis para a vinda de nosso Senhor Jesus Cristo.
+TS. 5:23
+Ora, amados, pois que temos tais promessas, purifiquemo-nos de toda a imundícia da carne e do espírito, aperfeiçoando a santificação no temor do Senhor. Il Co. 7:1
+Mas a vereda dos justos é como a luz da aurora, que vai brilhando mais e mais até ser dia perfeito. Pv. 4:18
+Pelo que, deixando os rudimentos da doutrina de Cristo, prossigamos até a perfeição. Hb.6:1
+Porque os que são segundo a carne, inclinam-se para as coisas da carne; mas os que são segundo o Espírito para as coisas do Espírito. Rm. 8:5
+E ali haverá um alto caminho, um caminho que se chamará o caminho santo. O imundo não passará por ele, mas será para aqueles: os caminhantes, até mesmo os loucos, não errarão. Is. 35:8 (I Pe. 2:2).
+9. BATISMO E SANTA CEIA
+Cremos que o batismo nas águas, em nome do Pai e do Filho e do Espírito Santo, de acordo com o mandamento de nosso Senhor, é um sagrado sinal exterior de uma obra interior; um belo e solene símbolo a lembrar-nos de que, assim como nosso Senhor morreu sobre a cruz do Calvário, assim também contamo-nos como mortos para o pecado, e a velha natureza com ele pregada no madeiro; e que, assim como ele foi descido do madeiro e sepultado, assim nós somos sepultados com ele pelo batismo da morte - para que, assim com o Cristo foi levantado dentre os mortos pela glória do Pai, assim também andemos em novidade de vida.
+Cremos na comemoração e observância da ceia do Senhor pelo sagrado uso do pão partido, um precioso tipo de Pão da vida - Jesus Cristo, cujo corpo foi partido por nós; e da seiva da videira- um maravilhoso tipo a lembrar sempre o participante, o sangue derramado pelo Salvador, que é a videira verdadeira, da qual seus filhos são as varas; que esta ordenança é como um glorioso arco-íris a transpor a amplidão do tempo entre o Calvário e a vinda do Senhor, quando no Reino do Pai ele compartilhará novamente da companhia de seus filhos, e que o servir e o receber este sagrado sacramento deve ser sempre precedido pelo mais solene exame do coração, autocrítica, perdão e amor para com todos os homens, para que ninguém participe indevidamente e beba condenação para sua própria alma.
+Onde é ensinado nas Escrituras
+Portanto ide, ensinai todas as nações, batizando-os em nome do Pai, do Filho e do Espírito Santo. Mt. 28:19 (também At. 10:47,48, GI. 3:27,28)
+De sorte que fomos sepultados com ele pelo batismo na morte, para que, como Cristo ressuscitou dos mortos, pela glória do Pai, assim andemos nós também em novidade de vida. Rm. 6:4 (Também Cl. 2:12; 1 Pe. 3:20,21; At. 22:16)
+De sorte que foram batizados os que de bom grado receberam a sua palavra; e naquele dia agregaram-se quase três mil almas. At. 2:41 (Também Mt. 28:19,20)
+Porque todas as vezes que comerdes este pão e beberdes este cálice anunciais a morte do Senhor, até que venha. | Co. 11:26. Examine-se pois o homem a si mesmo, e assim coma deste pão e beba deste cálice. I Co. 11:28 e II Co. 13:5
+10.0 BATISMO NO ESPÍRITO SANTO
+Cremos que o batismo no Espírito Santo é o recebimento do prometido Consolador, em poderosa e gloriosa plenitude, a fim de revestir o crente com poder do alto; para glorificar e exaltar o Senhor Jesus; para dar uma palavra inspirada em testemunho dEle; para promover o espírito de oração, santificação e sobriedade para capacitar o indivíduo e a igreja a ganhar almas de maneira eficiente, prática, alegre, cheio do Espírito; e que, sendo esta ainda a dispensação do Espírito Santo, tem o crente todo direito de esperar o seu recebimento da mesma maneira pela qual o receberam judeus e gentios igualmente, nos dias bíblicos, conforme se encontra registrado na Palavra, de modo que possa ser dito de nós o que foi com respeito à casa de Cornélio; o Espírito Santo caiu sobre eles, no princípio, assim como em nós agora.
+
+Onde é ensinado nas Escrituras
+E eu rogarei ao Pai, e ele vos dará outro Consolador, para que fique convosco para sempre; o Espírito de Verdade, que o mundo não pode receber, porque não o vê nem o conhece; mas vós o conheceis, porque habita convosco, e estará em vós. Jo.14:16,17
+Porque, na verdade, João batizou com água. Mas vós sereis batizados com o Espírito Santo... Mas recebereis a virtude do Espírito Santo, que há de vir sobre vós; e ser-me-eis testemunhas, tanto em Jerusalém como em toda a Judéia e Samaria, e até aos confins da terra. At. 1:5,8
+E todos foram cheios do Espírito Santo, e começaram a falar noutras línguas, conforme o Espírito lhes concedia que falassem. At. 2:4
+Então lhes impuseram as mãos e receberam o Espírito Santo. At. 8:17
+e dizendo Pedro ainda estas palavras, caiu o Espírito Santo sobre todos os que ouviram a palavra. E os fiéis que eram da circuncisão, todos quantos tinham vindo com Pedro, maravilharam-se de que o dom do Espírito Santo de derramasse também sobre os gentios. Porque os ouviam falar em línguas, e magnificar a Deus.At. 10:44-46
+E, impondo-lhes as mãos, veio sobre eles o Espírito Santo; e falavam línguas e profetizavam. At. 19:6. Não sabeis vós que sois o templo de Deus, e que o Espírito de Deus habita em vós? I Co. 3:16
+11.A VIDA CHEIA DO ESPÍRITO SANTO
+Cremos que, sendo o Espírito Santo como um vento poderoso e veemente, como línguas de chamas vivas, que podem sacudir e convulsionar comunidades inteiras para Deus, ele é, também, como uma delicada pomba, facilmente ofendido e magoado pela impiedade, frieza, vãs conversações, jactância e espírito de crítica ou julgamento, bem como pensamentos e ações que desonrem o Senhor Jesus; e que é, portanto, vontade de Deus que vivamos e andemos no Espírito, momento a momento, sob o precioso sangue do Cordeiro, a pisar respeitosa e suavemente na presença do Rei, sendo pacientes, amorosos, verdadeiros, sinceros, de oração, não murmuradores, estando a tempo e fora de tempo servindo ao Senhor.
+Onde é ensinado nas Escrituras
+E não entristeçais o Espírito Santo de Deus, no qual estais selados para o dia da redenção. Toda a amargura, e ira, e cólera, e gritaria e blasfêmias e toda a malícia seja tirada entre vós. Antes sede uns para com os outros benignos, misericordiosos, perdoando-vos uns aos outros, como também Deus vos perdoou em Cristo. Ef. 4:30-
+32. Orando em todo o tempo com toda a oração e súplica no Espírito, e vigiando nisto, com toda a perseverança e súplica por todos os santos. Ef. 6:18
+Rogo-vos pois, irmãos, pela compaixão de Deus, que apresenteis os vossos corpos em sacrifício vivo, santo e agradável a Deus, que é o vosso culto racional. E não vos conformeis com este mundo, mas transformai-vos pela renovação do vosso entendimento, para que experimenteis qual seja a boa, agradável e perfeita vontade de Deus. Rm. 12:1,2
+Aquele que diz que está nele, também deve andar como ele andou. I Jo. 2:6
+Andai em Espírito, e não cumprireis a concupiscência da carne. Se vivemos em Espírito, andemos também em Espírito. Gl. 5:16,25
+Se alguém destruir o templo de Deus, Deus o destruirá; porque o templo de Deus, que sois vós, é santo. I. Co. 3:17
+12.OS DONS E FRUTOS DO ESPÍRITO
+Cremos que o Espírito Santo tem os seguintes dons a serem concedidos à Igreja crente e fiel ao Senhor Jesus Cristo: a palavra de sabedoria, palavra de conhecimento fé, operação de maravilhas, dons de curar, profecia, discernimento, línguas, interpretação que, conforme o grau de graça e fé de quem os recebe, são repartidos a cada um diversamente, segundo a vontade do Espírito; que eles são dignos de serem mui avidamente desejados e buscados, na ordem e proporção em que mais sejam edificantes e benéficos à Igreja; e que o fruto do Espírito: amor, alegria, paz, longanimidade, mansidão, bondade, benignidade, fé, temperança, deve ser manifesto, cultivado e cuidadosamente guardado como adorno resultante de uma vida cheia do Espírito e evidência constante, eloqüente e irrefutável disso.
+Onde é ensinado nas Escrituras
+Acerca dos dons espirituais não quero, irmãos, que sejais ignorantes. Portanto, procurai com zelo os melhores dons. | Co. 12:1,31. Mas um só e o mesmo Espírito opera estas coisas, repartindo particularmente a cada um como quer. I Co. 12:11;14:12
+Assim também vós, como desejais dons espirituais, procurai abundar neles, para edificação da igreja. I Co. 14:12. Porque os dons e a vocação de Deus são sem arrependimento. Rm 11:29
+Deu modo que, tendo diferentes dons, segundo a graça que nos é dada, se é profecia, seja ela segundo a medida da fé; se é ministério, seja em ministrar; se é ensinar, haja dedicação ao ensino; ou o que exorta, use esse dom em exortar; o que reparte, faça-o com liberalidade; o que preside, com cuidado; o que exercita misericórdia, com alegria. Rm. 12:6-8
+Nisto é glorificado meu Pai, que deis muito fruto; e assim sereis meus discípulos. João 15:8
+E também já está posto o machado à raiz das árvores; toda a árvore, pois, que não dá bom fruto, corta-se e lança-se ao fogo. Lc. 3:9
+Rogo-vos pois, irmãos, pela compaixão de Deus, que apresenteis os vossos corpos em sacrifício vivo, santo e agradável a Deus, que é o vosso culto racional. E não vos conformeis com este mundo, mas transformai-vos pela renovação do vosso entendimento, para que experimenteis qual seja a boa, agradável e perfeita vontade de Deus. Rm. 12:1,2
+Aquele que diz que está nele, também deve andar como ele andou. I Jo. 2:6
+Andai em Espírito, e não cumprireis a concupiscência da carne. Se vivemos em Espírito, andemos também em Espírito. Gl. 5:16,25
+Se alguém destruir o templo de Deus, Deus o destruirá; porque o templo de Deus, que sois vós, é santo. I. Co. 3:17
+12.OS DONS E FRUTOS DO ESPÍRITO
+Cremos que o Espírito Santo tem os seguintes dons a serem concedidos à Igreja crente e fiel ao Senhor Jesus Cristo: a palavra de sabedoria, palavra de conhecimento fé, operação de maravilhas, dons de curar, profecia, discernimento, línguas, interpretação que, conforme o grau de graça e fé de quem os recebe, são repartidos a cada um diversamente, segundo a vontade do Espírito; que eles são dignos de serem mui avidamente desejados e buscados, na ordem e proporção em que mais sejam edificantes e benéficos à Igreja; e que o fruto do Espírito: amor, alegria, paz, longanimidade, mansidão, bondade, benignidade, fé, temperança, deve ser manifesto, cultivado e cuidadosamente guardado como adorno resultante de uma vida cheia do Espírito e evidência constante, eloqüente e irrefutável disso.
+
+Onde é ensinado nas Escrituras
+
+Acerca dos dons espirituais não quero, irmãos, que sejais ignorantes. Portanto, procurai com zelo os melhores dons. | Co. 12:1,31. Mas um só e o mesmo Espírito opera estas coisas, repartindo particularmente a cada um como quer. I Co. 12:11;14:12
+Assim também vós, como desejais dons espirituais, procurai abundar neles, para edificação da igreja. I Co. 14:12. Porque os dons e a vocação de Deus são sem arrependimento. Rm 11:29
+Deu modo que, tendo diferentes dons, segundo a graça que nos é dada, se é profecia, seja ela segundo a medida da fé; se é ministério, seja em ministrar; se é ensinar, haja dedicação ao ensino; ou o que exorta, use esse dom em exortar; o que reparte, faça-o com liberalidade; o que preside, com cuidado; o que exercita misericórdia, com alegria. Rm. 12:6-8
+Nisto é glorificado meu Pai, que deis muito fruto; e assim sereis meus discípulos. João 15:8
+E também já está posto o machado à raiz das árvores; toda a árvore, pois, que não dá bom fruto, corta-se e lança-se ao fogo. Lc. 3:9
+
+13.MODERAÇÃO
+Cremos que a moderação do crente deve ser notória a todos os homens; que sua experiência e proceder diários jamais o levem a extremos, fanatismos, manifestações escandalosas, calúnia, murmurações; mas que, sua sóbria,experiência cristã seja de uma firme retidão, sensatez, humildade, auto-sacrifício e conforme a Cristo.
+
+Onde é ensinado nas Escrituras
+Seja a vossa equidade notória a todos os homens. Perto está o Senhor. Fl. 4:5
+Para que não sejamos mais meninos inconstantes, levados em roda por todo o vento de doutrina. Antes, seguindo a verdade em caridade, cresçamos em tudo naquele que é cabeça, Cristo. Ef. 4:14,15
+Caridade não se porta com indecência. I Co. 13:5
+Revesti-vos, pois, como eleitos de Deus, santos e amados, de entranhas de misericórdia, de benignidade, humildade, mansidão longanimidade, suportando-vos uns aos outros, e perdoando-vos uns aos outros; se algum tiver queixa contra o outro, assim como Cristo vos perdoou, assim fazei vós também. Cl. 3:12,13
+14. CURA DIVINA
+Cremos que a cura divina é o poder do Senhor Jesus Cristo para curar os enfermos e os aflitos, em resposta à oração sincera; que Ele, sendo o mesmo ontem, hoje e para sempre, jamais mudou; mas é, ainda, um auxílio plenamente suficiente na hora da dor, capaz de saciar as necessidades, vivificar o corpo, a alma e o espírito a uma novidade de vida, em resposta à fé daqueles que oram com submissão à sua vontade divina e soberana.
+
+Onde é ensinado nas Escrituras
+Ele tomou sobre si as nossas enfermidades e levou as nossas doenças. Mt. 8:17
+Pois qual é mais fácil? Dizer: perdoados te são os teus pecados, ou dizer, levanta-te e anda? Mt. 9:5
+E estes sinais seguirão aos que crerem: em meu nome expulsarão demônios, falarão novas línguas, pegarão nas serpentes; e se beberem alguma coisa mortífera, não lhes fará dano algum; e porão as mãos sobre os enfermos, e os curarão. Mc.16:17,18
+Enquanto estendes a tua mão para curar e para que façam sinais e prodígios pelo nome do teu santo Filho Jesus. At. 4:30
+E a oração da fé salvará o doente, e o Senhor o levantará; e se houver cometido pecados, ser-lhe-ão perdoados. Tg. 5:15
+
+
+
+15.A SEGUNDA VINDA DE CRISTO
+Cremos que a segunda vinda de Cristo é pessoal e iminente; que ele descerá do céu nas nuvens de glória com voz de arcanjo e com a trombeta de Deus. E que, nesta hora, a qual ninguém sabe antecipadamente, os mortos em Cristo se levantarão, e os remidos que estiverem vivos serão levados acima, junto com eles, nas nuvens a encontrar o Senhor nos ares, para estarem sempre com o Senhor. E, vendo nós também, que mil anos são como um dia para o Senhor, e que ninguém sabe a hora do seu aparecimento, o qual cremos estar iminente, cada dia deve ser vivido como se Ele fosse esperado aparecer antes de findar o dia. Todavia, em obediência à sua ordem categórica "trabalhai até que eu venha", a obra de propagação do Evangelho, o envio de missionários e as obrigações gerais para a edificação da igreja devem ser promovidas tão ampla e diligentemente como se nem a nossa geração nem a vindoura fosse viver em carne para que pudesse ver aquele glorioso dia.
+Onde é ensinado nas Escrituras
+Porque o mesmo Senhor descerá do céu com alarido, e com voz de arcanjo, e com a trombeta de Deus; e os que morreram em Cristo ressuscitarão primeiro. Depois nós, os que ficarmos vivos, seremos arrebatados juntamente com ele nas nuvens, a encontrar o Senhor nos ares, e assim estaremos sempre com o Senhor. I Ts.4:16,17
+Renunciando a impiedade e às concupiscências mundanas, vivamos nesse presente século sóbria, justa e piamente. Aguardando a bem-aventurada esperança e o aparecimento da glória do grande Deus e nosso Senhor Jesus Cristo. Tt. 2:12,13
+Porém, daquele dia e hora ninguém sabe, nem os anjos do céu, nem o Filho, mas unicamente meu Pai. Vigiai, pois, porque não sabeis a que hora há de vir o vosso
+Senhor. Mt. 24:36,42,44
+Assim, também Cristo, oferecendo-se uma vez para tirar os pecados de muitos, aparecerá segunda vez, sem pecado, aos que o esperam para salvação. Hb. 9:28
+Negociai até que eu venha. Lc. 19:13
+Estejam cingidos os vossos lombos e acesas as vossas candeias, e sede vós semelhantes aos homens que esperam o seu Senhor, quando houver de voltar das bodas, para que, quando vier, e bater, logo possam abrir-lhe. Bem aventurado aqueles servos, os quais, quando o Senhor vier, achar vigiando! Em verdade vos digo que se cingirá, e os fará assentar à mesa e, chegando-se, os servirá. Le. 12:35-37
+
+16. RELAÇÕES PARA COM A IGREJA
+Cremos que, tendo aceitado o Senhor Jesus Cristo como Salvador pessoal e Rei, e tendo assim nascido na família e no corpo invisível da Igreja do Senhor, é sagrado dever do crente, quanto esteja em seu poder, identificar-se com a visível Igreja de Cristo sobre a terra, e trabalhar com o maior entusiasmo pela edificação do Reino de Deus; e que essa Igreja visível é uma congregação de crentes que se tem associado entre si, em crista comunhão e na unidade do Espírito, a observar as ordenanças de Cristo, adorando-O na beleza da santidade, falando uns aos outros em salmos e hinos e cânticos espirituais, lendo e proclamando sua palavra, trabalhando pela salvação das almas dando dos seus meios temporais para promover a sua obra, edificando, encorajando; exortando uns aos outros na mais santa fé e trabalhando harmoniosamente juntos, como filhos diletos que, embora muitos, são um só corpo, do qual Cristo é o cabeça.
+Onde é ensinado nas Escrituras
+Louvai ao Senhor. Louvarei ao Senhor de todo o coração, na assembléia dos justos e na congregação. SI. 111:1
+E consideremo-nos uns aos outros para estimularmos à caridade e as boas obras; não deixando a nossa congregação, como é costume de alguns, antes admoestando-nos uns aos outros e tanto mais, quando vedes que se vai aproximando aquele dia. Hb. 10:24,25
+De sorte que as igrejas eram confirmadas na fé, e cada dia cresciam em número. At. 16:5. E todos os dias acrescentava o Senhor à igreja aqueles que se haviam de salvar. At. 2:47
+Assim nós, que somos muitos, somos um só corpo em Cristo, mas individualmente somos membros uns dos outros. Rm. 12:5 (Também ver Rm. 12:6,7,8)
+Aqueles que temem ao Senhor falam cada um com o seu companheiro, e o Senhor atenta e ouve; e há um memorial escrito diante dele, para os que temem ao Senhor, e para os que se lembram do seu nome. E eles serão para mim particular tesouro; poupa-los-ei como um homem poupa a seu filho, que o serve. Mt. 3:16,17
+
+17. GOVERNO CIVIL
+Cremos que o governo civil é de indicação divina, para a promoção da boa ordem na sociedade humana e dos interesses da mesma; e que se deva orar pelos governantes e administradores, devendo eles ser obedecidos e apoiados em todo tempo exceto, somente, nas coisas contrárias à vontade de nosso Jesus Cristo, o qual é soberano da consciência do seu povo, Rei dos reis, e Senhor dos Senhores.
+Onde é ensinado nas Escrituras
+E as potestades que há foram ordenadas por Deus... porque os magistrados não são terror para as boas obras, mas para as más. Rm. 13:13. (Também Dt. 16:18;
+IISm. 23:3; Ex. 18:21-23; Jr. 30:21)
+
+Mais importa obedecer a Deus do que aos homens. At. 5:29. E não temais os que matam o corpo, e não podem matar a alma; temei antes aquele que pode fazer perecer no inferno a alma e o corpo. Mt. 10:28 (Também Dn. 3:15-18; 6:7-10; At.4:18-20)
+Porque um só é o vosso Mestre, que é o Cristo. Mt. 23:10
+E no vestido e na sua coxa tem escrito este nome: rei dos Reis e Senhor dos
+Senhores. Ap. 19:16. (Também SI. 72:11; SI. 2; Rm. 14:9-13
+18.0 JUIZO FINAL
+Cremos que os mortos, tanto humildes como poderosos, serão ressuscitados e estarão como os vivos perante o trono de julgamento de Deus; e que, aí, uma solene e terrível separação se dará, em que os maus serão condenados à punição eterna e os justos à vida eterna; e que esse julgamento estabelecerá para sempre o estado final dos homens, no céu ou no inferno, em princípios de justiça, conforme é manifesto na Sua santa Palavra.
+Onde é ensinado nas Escrituras
+Porque todos devemos comparecer ante o tribunal de Cristo para que cada um receba segundo o que tiver feito por meio do corpo, ou bem, ou mal. lICo. 5:10
+Mandará o Filho do Homem os seus anjos, e eles colherão do seu reino tudo o que causa escândalo, e os que cometem iniquidade e lançá-los-ão na fornalha de fogo; ali haverá pranto e ranger de dentes. Então os justos resplandecerão como o Sol, no reino do seu Pai. Quem tem ouvidos para ouvir, ouça. Mt. 13:41-43, Hb. 9:27
+19.0 CÉU
+Cremos que o céu é a habitação indescritivelmente gloriosa do Deus vivo; e que para lá foi o Senhor a fim de preparar um lugar para seus filhos; que, para que essa cidade quadrangular, cujo construtor e realizador é Deus, os crentes mais fervorosos, que lavaram suas vestiduras no sangue do Cordeiro e venceram pela espada do seu testemunho, serão levados; que o Senhor Jesus Cristo os apresentará ao Pai, sem manchas ou tristezas; e que lá, em alegria indizível eles contemplarão, para sempre, sua face maravilhosa, num reino eterno onde não há trevas, nem há necessidade de luz, nem tristeza, nem lágrimas, nem dor, nem morte, mas hostes de anjos servidores dedilham suas harpas, cantam os louvores do nosso Rei e, reverenciando perante o trono, proclamam: "Santo, Santo, Santo"
+Onde é ensinado nas Escrituras
+Mas, como está escrito: as coisas que o olho não viu e o ouvido não ouviu, e não subiram ao coração do homem, são as que Deus preparou para os que o amam. ICo. 2:9
+Na casa de meu Pai há muitas moradas; se não fosse assim eu vô-lo teria dito; vou preparar-vos lugar. João 14:2
+E ali não haverá mais noite, e não necessitarão de lâmpada nem de luz do sol, porque o Senhor os alumia; e reinarão para todo o sempre. Ap. 22:4
+E Deus limpará de seus olhos toda lágrima; e não haverá mais morte, nem pranto, nem clamor, nem dor, porque já as primeiras coisas são passadas. Ap. 21:4
+Por isso estão diante do trono de Deus, e o servem de dia e de noite no seu templo; e aquele que está assentado sobre o trono os cobrirá com sua sobra. Nunca mais terão fome, nunca mais terão sede; nem sol nem ardor algum cairã sobre eles.
+Porque o Cordeiro que está no meio do trono os apascentará; e ele servirá de guia para as fontes das aguas de vida; e Deus limpará de seus olhos toda a lágrima. Ap.7:15-17
+20.0 INFERNO
+Cremos que o inferno é um lugar de trevas exteriores e da mais profunda tristeza, onde o verme não morre e o fogo não se apaga; um lugar preparado para o Diabo e seus anjos, onde haverá choro e pranto e ranger de dentes, lugar de amargura e eterno arrependimento por parte daqueles que rejeitaram a misericórdia, o amor e a ternura do Salvador crucificado, escolhendo a morte em vez da vida; e que ali, em um lago que queima com fogo e enxofre serão lançados os descrentes, OS abomináveis, os criminosos, os feiticeiros, os idólatras, os mentirosos, e os que rejeitaram e desprezaram o amor e sacrifício de um Redentor banhado em sangue, deixando atrás a cruz para sua perdição, apesar de toda instância e advertência do
+Espírito Santo.
+
+Onde é ensinado nas Escrituras
+Mandará o Filho do Homem e seus anjos, e eles colherão do seu reino tudo o que causa escândalo, e os que cometem iniqüidade. E lançá-los-ão na fornalha de fogo;
+ali haverá pranto e ranger de dentes. Mt. 13:41-42.
+E o diabo, que os enganava, foi lançado no lago de fogo e enxofre, onde esta a besta e o falso profeta; de dia e de noite serao atormentados para todo o sempre. E aquele que não foi achado escrito no livro da vida foi lançado no lago de fogo. Ap.20:10,15
+Também o tal beberá do vinho da ira de Deus, que se deitou, não misturado, no cálice da sua ira; e será atormentado com fogo e enxofre diante dos santos anjos e diante do Cordeiro. E o fumo do seu tormento sobe para todo o sempre; e não tem repouso nem de dia nem de noite os que adoram a besta e a sua imagem, e aquele , e aquele que receber o sinal do seu nome. Ap. 14:10,11
+Então dirá também aos que estiverem à sua esquerda: apartai-vos de mim, malditos, para o fogo eterno, preparado para o diabo e seus anjos. Mt. 25:41. E, se a tua mão escandalizar, corta-a; melhor para tia é entrares na vida alijado, do que, tendo duas mãos, ires para o inferno, para o fogo que nunca se apaga, onde o seu bicho não morre, e o fogo nunca se apaga. Mc. 9:43,44.5
+Vivo eu, diz o Senhor Jeová, que não tenho prazer na morte do ímpio, mas que o ímpio se converta do seu caminho e viva. Convertei-vos dos vossos maus caminhos;
+pois por que razão morrereis, ó casa de Israel? Ez. 33:11
+
+21.EVANGELISMO
+Cremos que, à vista do fato de que todo o presente estado de coisas passará, e que o fim de todas as coisas é iminente, os filhos remidos do Senhor Jeová devem levantar-se e brilhar como uma luz que não pode ser escondida, uma cidade edificada sobre um monte, espargindo o evangelho aos confins da terra, cingindo o globo com a mensagem da salvação, declarando com zelo e entusiasmo ardentes todo o conselho de Deus; que, quando o Senhor da glória aparecer, eles serão achados de pé, tendo seus lombos cingidos com a verdade, suas atividades e seus mistérios ricamente compensados com a abundância de jóias que ganharam e guardaram para ele - as almas preciosas - conduzidas das trevas para a luz, através do instrumento de seu fiel testemunho; que ao ganhar almas é a atividade por excelência da igreja sobre a terra; e que, portanto, toda opressão ou embaraço que vise a extinguir a chama ou prejudicar a eficiência na pregação mundial do evangelho, deve ser eliminada e não admitida, como indigna da igreja, prejudicial á sacratíssima causa de Cristo e contrária à grande comissão do Senhor.
+Onde é ensinado nas Escrituras
+conjuro-te pois, diante de Deus, e do Senhor Jesus Cristo, que há de julgar os vivos e os mortos, na sua vinda e no seu reino, que pregues a palavra, instes a tempo e fora de tempo, redargüas, repreendas, exortes, com toda longanimidade e doutrina.II Tm. 4:1,2
+Remindo o tempo; porquanto os dias são maus. Ef. 5:16
+O que ganha almas sábio é. Pv. 11:30
+Saiba que aquele que fizer converter do erro do seu caminho um pecador, salvará da morte uma alma, e cobrirá uma multidão de pecados. Tg. 5:20
+Filho do homem, eu te dei por atalaia sobre a casa de Israel; e tu da minha boca ouviras a palavra, e os avisarás da minha parte. Quando eu disser ao ímpio:
+Certamente morrerás; não o avisando tu, não o falando para avisar o ímpio acerca do seu caminho ímpio, para salvar a sua vida, aquele ímpio morrerá na sua maldade, mas o seu sangue da tua mão o requererei. Ez. 3:17,18
+Levantai os vossos olhos, e vede as terras, que já estão brancas para a ceifa. E o queia a receb que ceia, anjunta fregozar. Porque eino e verdadeiro o dia,
+que um é o que semeia, e o outro o que ceifa. Jo. 4:35-37
+
+22. DÍZIMOS E OFERTAS
+Cremos que o método estabelecido por Deus para manter o seu ministério e promover a propagação do evangelho, conforme sua ordem é o dízimo, o qual é acatado por nossas igrejas internacionalmente, não só como sendo o método de Deus para prover quanto as necessidades materiais e financeiras da sua igreja, mas, para soerguer a moral espiritual do seu povo de tal sorte que Deus haja por força abençoá-los. Somos ordenados em MI. 3:10: "Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa, depois, fazei prova de mim, diz o Senhor dos Exércitos, se eu não vos abrir as janelas dos céus e não derramar sobre vós uma bênção tal que dela vos advenha a maior abastança. " No tocante a "dar" e "ofertas voluntárias" é ordenado pelo Senhor e praticado em todas 
+as nossas igrejas, internacionalmente, como parte do plano de Deus para 
+atender às necessidades materiais da igreja e satisfazer a espiritualidade do seu povo. Somos admoestados em Lucas 6:38 - "Daí, e ser-vos-á dado; boa medida, recalcada, sacudida e transbordando vos deleitarão no vosso regaço, porque com a mesma medida com que medirdes também vos medirão de novo"
+Sendo co-herdeiro com ele, sabemos que dar para o seu reino - que é, também, nosso - é algo agradável, sendo mais abençoado dar do que receber, pois somos ordenados em Il Co. 9:7 - "Cada um contribua segundo propôs no seu coração; não com tristeza, ou por necessidade, porque Deus ama ao que dá com alegria."
+23.MEMBROS
+Os candidatos a membro devem, primeiramente, ser examinados quanto a sua fé, sendo feita oração juntamente com os mesmos e, nessa ocasião, encorajados no seu propósito. Deve o candidato mostrar evidência de possuir genuína experiência de novo nascimento, ser batizado por imersão em nome do Pai, do Filho e do Espírito Santo, e viver uma vida cristão que sirva de exemplo tanto para pecadores como para convertidos, possuindo um grande desejo em ganhar almas e amor quanto ao progresso da causa do Evangelho Quadrangular no mundo, devendo declarar sua lealdade a esta associação e disposição em auxiliar na sua manutençao, tanto com seus recursos particulares como com seu esforço conjugado. Cada candidato, como tal, expressara seu reconhecimento quanto ao fato de que "uma casa dividida contra si mesma não pode subsistir" e a sua adesão a linha desta associação, para que não haja deslealdade, insubordinaçao, murmuração, críticas ou calúnias contra a mesma, ou contra seus dirigentes, e, se em algum tempo, qualquer membro sentir que não está mais sendo leal ou tenha perdido a simpatia para com esta associação e, bem assim, não seja mais, como outrora, uma voz unânime para com ela, pedirá o mesmo uma carta de demissão e, discretamente, se retirará do rol de membros, reservando-se às autoridades da associação o direito de induzi-lo a assim proceder, caso se prolongue em abster-se disto; que o amor pelas almas e a paixão por ganhá-las deve ser a grande base e supremo fim para o qual sejam conduzidos todos os esforços, e que idéias marginais e concepções não essenciais, bem como ocupar-se em discutir sutiezas entre doutrinas, coisas essas que tendem a quebrar a unidade e distrair da chama ardente do ganhar almas - devem ser evitadas e refutadas onde quer que se apresentem, que Cristo deve ser a figura central a ser mostrada, até que todos os homens O vejam, O amem, e dEle se aproximem.
+
+
