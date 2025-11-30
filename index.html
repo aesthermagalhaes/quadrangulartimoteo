@@ -1,950 +1,738 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igreja do Evangelho Quadrangular - Olaria 2</title>
-    
-    <!--  CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Igreja - Galeria & Admin</title>
 
-   
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f4f1ee;
-        }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(244, 241, 238, 0.85), rgba(126, 86, 182, 0.6)), url('https://i.pinimg.com/736x/d2/69/0a/d2690a7428ca8b7291ea2e74aa5c4202.jpg');
-            background-size: cover;
-            background-position: top;
-        }
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .section-title {
-            @apply text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-center;
-        }
-        .section-subtitle {
-            @apply text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .doctrine-card {
-            @apply bg-white rounded-2xl shadow-lg p-8 text-center transform hover:scale-105 hover:shadow-2xl transition-all duration-300;
-        }
-        .doctrine-icon {
-            @apply text-6xl mb-6 mx-auto;
-        }
+  <!-- SheetJS for Excel import -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
-        .section-bg-alt {
-            background-color: #fdfcfb;
-        }
-        
-        
-        .reveal {
-            position: relative;
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .reveal.active {
-            transform: translateY(0px);
-            opacity: 1;
-        }
-
-     
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        .content-fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background:#f4f1ee; color:#111827; }
+    .hero { background: linear-gradient(135deg, rgba(244,241,238,0.9), rgba(126,86,182,0.2)), url('https://i.pinimg.com/736x/d2/69/0a/d2690a7428ca8b7291ea2e74aa5c4202.jpg'); background-size:cover; background-position:center; }
+    .masonry { column-gap:1rem; width:100%; }
+    @media (min-width:640px) { .masonry { column-count:2; } }
+    @media (min-width:1024px) { .masonry { column-count:3; } }
+    .masonry-item { display:inline-block; width:100%; margin:0 0 1rem; break-inside:avoid; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); overflow:hidden; }
+    .masonry-item img { width:100%; height:auto; display:block; }
+    .album-card { width:220px; background:white; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.06); overflow:hidden; cursor:pointer; transition:transform .15s; }
+    .album-card:hover { transform:translateY(-6px); }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:80; padding:1rem; }
+    .modal-content { max-width:1100px; width:100%; max-height:90vh; overflow:auto; border-radius:12px; background:white; padding:1rem; }
+    .admin-badge { position:fixed; right:1rem; bottom:1rem; background:#111827; color:white; padding:8px 12px; border-radius:999px; z-index:90; display:none; font-weight:600; box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+  </style>
 </head>
-<body class="text-gray-800">
+<body>
 
-   
-    <div id="main-site">
-        <!-- ======================= Cabeçalho) ======================= -->
-        <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-                <a href="#" class="flex items-center">
-                    <img src="logo.png" alt="Logo da IEQ" class="h-16 md:h-20 transition-transform hover:scale-110">
-                </a>
-
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#sobre" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg">Sobre</a>
-                    <a href="#doutrina" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg">Doutrina</a>
-                    <a href="#horarios" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg">Programação</a>
-                    <a href="#galeria" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg"> Galeria</a>
-                    <a href="#declaracao" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg">Declaração de Fé</a>
-                     <a href="#aniversariantes" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg"> Aniversariantes</a>
-                    <a href="#contato" class="text-gray-700 hover:text-red-600 font-medium transition-colors text-lg">Contato</a>
-                    <a href="https://www.instagram.com/ieqolaria2/" target="_blank" class="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all font-semibold">
-                        <i class="fab fa-instagram mr-2"></i>Instagram
-                    </a>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
-                        <i class="fas fa-bars fa-2x"></i>
-                    </button>
-                </div>
-            </nav>
-
-            <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-                <a href="#sobre" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Sobre Nós</a>
-                <a href="#doutrina" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Nossa Doutrina</a>
-                <a href="#horarios" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Programação</a>
-                <a href="#galeria" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Galeria</a>
-                <a href="#declaracao" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Declaração de Fé</a>
-               <a href="#aniversariantes" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium"> Aniversariantes</a>
-                <a href="#contato" class="block px-6 py-4 text-gray-700 hover:bg-gray-100 font-medium">Contato</a>
-                <a href="https://www.instagram.com/ieqolaria2/" target="_blank" class="block px-6 py-4 text-pink-600 hover:bg-gray-100 font-medium">
-                    <i class="fab fa-instagram mr-2"></i>Instagram
-                </a>
-            </div>
-        </header>
-
-        <!-- ======================= Menu ======================= -->
-        <main>
-            <!-- Cabecalho -->
-            <section class="hero-gradient pt-28 pb-32 md:pt-40 md:pb-48">
-                <div class="container mx-auto px-6 text-center">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">Bem-vindo à IEQ Olaria II</h1>
-                    <p class="text-xl md:text-2xl text-gray-800 mb-12 max-w-4xl mx-auto"> Venha nos visitar e fazer parte da nossa família.</p>
-                    <a href="#horarios" class="bg-purple-600 text-white px-10 py-4 rounded-full text-xl font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Participe de um Culto
-                    </a>
-                </div>
-            </section>
-
-            <!-- Sobre Nós  -->
-            <section id="sobre" class="py-24 md:py-32 reveal">
-                <div class="container mx-auto px-6">
-                    <h2 class="section-title">Sobre Nossa Igreja</h2>
-                    <p class="section-subtitle">Conheça um pouco da nossa história e da nossa missão.</p>
-                    <div class="flex flex-col lg:flex-row items-center gap-16">
-                        <div class="lg:w-1/2">
-                            <img src="https://scontent.fipn1-1.fna.fbcdn.net/v/t51.82787-15/536420472_18320172322211962_8100673854223650046_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OnGzYrY_qE4Q7kNvwG8kBB3&_nc_oc=AdkXCYOffOYlqLnwfzUlHM_wvL_YBc46lXToacE1Tf7ZS8snZ6hyeZJenwuHKEPEF2Y&_nc_zt=23&_nc_ht=scontent.fipn1-1.fna&_nc_gid=rpDdeFTxKmEfBDBwgIwBQQ&oh=00_AfbR4PxwQcJ6XpgEekx5EpWqGE1szFUShIltRJntL5mDLA&oe=68C36BF5" alt="Comunidade da igreja" class="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="lg:w-1/2 text-lg text-gray-700 space-y-6 text-justify leading-relaxed">
-                            <p>A Igreja do Evangelho do Evangelho Quadrangular, sede de Timóteo,  é uma igreja cheia de vida e acolhedora, dedicada a comunicar o evangelho de Jesus Cristo. Nossa missão é servir a Deus e à nossa comunidade com amor, compaixão e dedicação.</p>
-                            <p>Liderados pelos nossos pastores e superintendentes Deywson e Sônia Andrade, buscamos ser um farol de esperança e um ponto de apoio para todos que nos procuram. Cremos em um Deus que salva, cura, batiza com o Espírito Santo e que em breve voltará.</p>
-                            <p>Nossas portas estão sempre abertas. Sinta-se em casa para adorar a Deus conosco e crescer na fé.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Doutrina -->
-            <section id="doutrina" class="py-24 md:py-32 section-bg-alt reveal">
-                <div class="container mx-auto px-6">
-                    <h2 class="section-title">A Doutrina Quadrangular</h2>
-                    <p class="section-subtitle">Nossa fé é fundamentada em quatro pilares essenciais do ministério de Jesus Cristo.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-                        <div class="doctrine-card">
-                            <i class="fas fa-cross doctrine-icon" style="color: #d9534f;"></i>
-                            <h3 class="text-3xl font-bold mb-4 text-gray-800">Jesus Salva</h3>
-                            <p class="text-gray-600 text-lg leading-relaxed">Cremos que Jesus Cristo morreu na cruz para nos salvar, oferecendo perdão e vida eterna a todos que creem. (João 3:16)</p>
-                        </div>
-                        <div class="doctrine-card">
-                            <i class="fas fa-dove doctrine-icon" style="color: #f0ad4e;"></i>
-                            <h3 class="text-3xl font-bold mb-4 text-gray-800">Jesus Batiza</h3>
-                            <p class="text-gray-600 text-lg leading-relaxed">Cremos no batismo com o Espírito Santo que nos capacita para servir a Deus com poder e ousadia. (Atos 1:8)</p>
-                        </div>
-                        <div class="doctrine-card">
-                            <i class="fas fa-solid fa-trophy doctrine-icon" style="color: #5bc0de;"></i>
-                            <h3 class="text-3xl font-bold mb-4 text-gray-800">Jesus Cura</h3>
-                            <p class="text-gray-600 text-lg leading-relaxed">Cremos que Jesus tem o poder de curar nossos corpos, almas e espíritos, trazendo restauração completa. (Isaías 53:5)</p>
-                        </div>
-                        <div class="doctrine-card">
-                            <i class="fas fa-crown doctrine-icon" style="color: #8A2BE2;"></i>
-                            <h3 class="text-3xl font-bold mb-4 text-gray-800">Jesus Voltará</h3>
-                            <p class="text-gray-600 text-lg leading-relaxed">Cremos na segunda vinda de Jesus, quando Ele retornará em glória para buscar a Sua Igreja. (1 Tessalonicenses 4:16-17)</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Horários  -->
-            <section id="horarios" class="py-24 md:py-32 reveal">
-                <div class="container mx-auto px-6">
-                    <h2 class="section-title">Programação da Semana</h2>
-                    <p class="section-subtitle">Junte-se a nós em nossos cultos e reuniões. Você é nosso convidado especial!</p>
-                    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden mt-10">
-                        <ul class="divide-y divide-gray-200">
-                            <li class="p-8 flex flex-col sm:flex-row justify-between items-center hover:bg-red-50 transition-colors duration-300">
-                                <div>
-                                    <p class="text-2xl font-bold text-red-600">Culto de Domingo</p>
-                                    <p class="text-gray-600 text-lg mt-1">Uma celebração especial de louvor e adoração.</p>
-                                </div>
-                                <p class="text-xl font-semibold text-gray-800 mt-4 sm:mt-0">Domingo, 08:00h e 19:30h</p>
-                            </li>
-                            <li class="p-8 flex flex-col sm:flex-row justify-between items-center hover:bg-red-50 transition-colors duration-300">
-                                <div>
-                                    <p class="text-2xl font-bold text-red-600">Escola Dominical</p>
-                                    <p class="text-gray-600 text-lg mt-1">Uma manhã para aprender mais da palavra de Deus.</p>
-                                </div>
-                                <p class="text-xl font-semibold text-gray-800 mt-4 sm:mt-0">Domingo, 08:00h</p>
-                            </li>
-                            <li class="p-8 flex flex-col sm:flex-row justify-between items-center hover:bg-blue-50 transition-colors duration-300">
-                                <div>
-                                    <p class="text-2xl font-bold text-blue-600">Quarta de Guerra</p>
-                                    <p class="text-gray-600 text-lg mt-1">Tempo de busca da presença de Deus e comunhão</p>
-                                </div>
-                                <p class="text-xl font-semibold text-gray-800 mt-4 sm:mt-0">Quarta-feira, 08:00h e 19:30h</p>
-                            </li>
-                            <li class="p-8 flex flex-col sm:flex-row justify-between items-center hover:bg-yellow-50 transition-colors duration-300">
-                                <div>
-                                    <p class="text-2xl font-bold text-yellow-600">Oração</p>
-                                    <p class="text-gray-600 text-lg mt-1">Uma noite de fé, clamor e manifestação do poder de Deus.</p>
-                                </div>
-                                <p class="text-xl font-semibold text-gray-800 mt-4 sm:mt-0">Quinta, 19:30h</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            
-
-            <!-- Galeria  -->
-            <section id="galeria" class="py-24 md:py-32 section-bg-alt reveal">
-                <div class="container mx-auto px-6 text-center">
-                    <h2 class="section-title"> Fotos</h2>
-                    <p class="section-subtitle"> Veja os registros de momentos especiais</p>
-                    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 text-left mt-10">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">GALERIA EM BREVE</h3>
-                        
-                    </div>
-                </div>
-            </section>
-
-            <!-- Declaração da Fé  -->
-            <section id="declaracao" class="py-24 md:py-32 section-bg-alt reveal">
-                <div class="container mx-auto px-6 text-center">
-                    <h2 class="section-title">Declaração de Fé</h2>
-                    <p class="section-subtitle">Conheça a nossa declaração de fé e se torne um membro.</p>
-                    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 text-left mt-10">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Declaração de fé - Quadrangular</h3>
-                        <img src="declaracao.png" alt="Banner do curso de discipulado" class="w-full h-auto rounded-xl mb-6">
-                        <p class="text-lg text-gray-700 mb-6">Uma apostila fundamental para todos que desejam firmar os primeiros passos na fé e se tornar um membro. Explore as doutrinas essenciais da vida cristã de forma clara e prática.</p>
-                        <button id="start-discipleship-btn" class="w-full bg-blue-600 text-white px-8 py-4 rounded-xl text-xl font-bold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
-                            Acessar declaração de fé
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-             <!-- Aniversariantes  -->
-            <section id="aniversariantes" class="py-24 md:py-32 section-bg-alt reveal">
-                <div class="container mx-auto px-6 text-center">
-                    <h2 class="section-title">Aniversariantes do mês</h2>
-                    <p class="section-subtitle"> Veja os aniversariantes do mês</p>
-                    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 text-left mt-10">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">ANIVERSARIANTES EM BREVE</h3>
-                        
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contato e Localização  -->
-            <section id="contato" class="py-24 md:py-32 reveal">
-                <div class="container mx-auto px-6">
-                    <h2 class="section-title">Visite-nos</h2>
-                    <p class="section-subtitle">Será uma alegria receber você e sua família em nossa casa.</p>
-                    <div class="flex flex-col lg:flex-row gap-10 items-center">
-                        <div class="lg:w-1/2 w-full h-96 md:h-[500px] rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
-                            <iframe 
-                                src="https://maps.google.com/maps?q=Rua%2059%2C%2045%20Olaria%202%2C%20Tim%C3%B3teo%20MG&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                                width="100%" 
-                                height="400" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                        <div class="lg:w-1/2 w-full">
-                            <div class="bg-white p-10 rounded-2xl shadow-2xl">
-                                <h3 class="text-4xl font-bold mb-8 text-gray-800">IEQ Olaria II</h3>
-                                <div class="space-y-6">
-                                    <p class="flex items-start text-lg">
-                                        <i class="fas fa-map-marker-alt w-6 text-blue-600 mt-1"></i>
-                                        <span class="ml-4">  Rua 59, numero 45, Olaria2 - Timoteo MG </span>
-                                    </p>
-                                    <p class="flex items-center text-lg">
-                                        <i class="fas fa-phone w-6 text-blue-600"></i>
-                                        <span class="ml-4">(31) 3848-2880</span>
-                                    </p>
-                                    <div class="pt-6">
-                                        <h4 class="font-bold text-xl mb-3 text-gray-800">Siga-nos no Instagram:</h4>
-                                        <a href="https://www.instagram.com/ieqolaria2/" target="_blank" class="text-lg text-pink-600 hover:underline font-semibold">
-                                            @ieqolaria2
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- ======================= Rodaé ======================= -->
-        <footer class="bg-gray-800 text-white py-12">
-            <div class="container mx-auto px-6 text-center">
-                <img src="/logo.png" alt="Logo IEQ Olaria" class="h-24 mx-auto mb-5"/>
-                <p class="text-base text-gray-300">&copy;  Igreja do Evangelho Quadrangular - Olaria 2.</p>
-                <p class="text-gray-400">Todos os direitos reservados.</p>
-            </div>
-        </footer>
+  <!-- LOGIN MODAL (visible) -->
+  <div id="loginModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-90">
+    <div class="bg-white rounded-xl shadow-xl p-6 w-[360px]">
+      <h2 class="text-xl font-bold mb-2 text-center">Acesso do Administrador</h2>
+      <p class="text-sm text-gray-600 mb-4 text-center">Insira a senha para ativar o modo administrador.</p>
+      <input id="adminPasswordInput" type="password" placeholder="Senha do admin" class="w-full p-3 border rounded mb-4" />
+      <div class="flex gap-3">
+        <button id="adminLoginBtn" class="flex-1 bg-blue-600 text-white p-2 rounded font-semibold">Entrar</button>
+        <button id="adminCloseBtn" class="flex-1 bg-gray-100 p-2 rounded">Fechar</button>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">Senha padrão: <code>admin123</code> (mude no script se desejar)</p>
     </div>
+  </div>
 
-    <!-- declacao -->
-    <div id="discipleship-container" class="hidden">
-        <div class="flex flex-col md:flex-row min-h-screen bg-gray-100">
-            
-            <aside class="w-full md:w-80 bg-white shadow-lg p-6 flex-shrink-0">
-                <div class="flex items-center justify-between gap-3 mb-6">
-                     <h1 class="text-xl font-bold text-gray-800">Declaração de Fé</h1>
-                     <button id="back-to-main-site-btn" class="text-sm text-red-600 hover:underline">Voltar ao Site</button>
-                </div>
-                <nav id="lesson-menu" class="space-y-2 custom-scrollbar overflow-y-auto" style="max-height: calc(100vh - 120px);"></nav>
-            </aside>
+  <!-- ADMIN BADGE + LOGOUT -->
+  <div id="adminBadge" class="admin-badge flex items-center gap-3">
+    <span>ADMIN</span>
+    <button id="btnAdminLogout" class="bg-red-600 text-white px-2 py-1 rounded text-sm">Logout</button>
+  </div>
 
- 
-            <main class="flex-1 p-4 sm:p-6 md:p-10">
-                <div id="content-area" class="bg-white rounded-2xl shadow-md p-6 sm:p-8 w-full max-w-4xl mx-auto min-h-[80vh] flex flex-col"></div>
-                
-                <div id="navigation-buttons" class="flex justify-between items-center mt-8 max-w-4xl mx-auto">
-                    <button id="prev-btn" class="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
-                        <i class="fas fa-arrow-left"></i> Anterior
-                    </button>
-                    <span id="progress-indicator" class="text-sm font-medium text-gray-600"></span>
-                    <button id="next-btn" class="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
-                        Próxima <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </main>
+  <!-- Header -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3"><img src="logo.png" alt="logo" class="h-12"><span class="font-bold text-lg">IEQ Olaria II</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#sobre" class="text-gray-700 hover:text-red-600">Sobre</a>
+        <a href="#doutrina" class="text-gray-700 hover:text-red-600">Doutrina</a>
+        <a href="#horarios" class="text-gray-700 hover:text-red-600">Programação</a>
+        <a href="#galeria" class="text-gray-700 hover:text-red-600">Galeria</a>
+        <a id="navMembros" href="#membros" class="text-gray-700 hover:text-red-600 hidden">Membros</a>
+        <a href="#contato" class="text-gray-700 hover:text-red-600">Contato</a>
+        <a href="https://www.instagram.com/ieqolaria2/" target="_blank" class="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-3 py-2 rounded-full"><i class="fab fa-instagram mr-2"></i>@ieqolaria2</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="text-gray-700"><i class="fas fa-bars fa-2x"></i></button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <a href="#sobre" class="block px-6 py-3">Sobre</a>
+      <a href="#doutrina" class="block px-6 py-3">Doutrina</a>
+      <a href="#horarios" class="block px-6 py-3">Programação</a>
+      <a href="#galeria" class="block px-6 py-3">Galeria</a>
+      <a id="mobileNavMembros" href="#membros" class="block px-6 py-3 hidden">Membros</a>
+      <a href="#contato" class="block px-6 py-3">Contato</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero py-24 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">Bem-vindo à IEQ Olaria II</h1>
+      <p class="text-lg md:text-xl text-gray-800">Venha nos visitar e fazer parte da nossa família.</p>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-6 pb-12">
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-16">
+      <div class="container mx-auto px-6">
+         <h2 class="text-2xl font-bold mb-2">Sobre Nossa Igreja</h2>
+        <p class="section-subtitle">Conheça um pouco da nossa história e da nossa missão.</p>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <img src="logo.png" alt="Comunidade" class="rounded-2xl shadow-2xl w-full object-cover">
+          <div class="text-lg text-gray-700 space-y-4">
+            <p>A Igreja do Evangelho do Evangelho Quadrangular, sede de Timóteo, é uma igreja cheia de vida e acolhedora, dedicada a comunicar o evangelho de Jesus Cristo...</p>
+            <p>Liderados pelos nossos pastores Deywson e Sônia Andrade, buscamos ser um farol de esperança...</p>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+
+    <!-- Doutrina (resumido) -->
+    <section id="doutrina" class="py-8 bg-white rounded-lg p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-center mb-2">Doutrina Quadrangular</h2>
+      <p class="section-subtitle text-center">Nossa fé é fundamentada em quatro pilares essenciais.</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 bg-white rounded-2xl shadow-lg text-center">
+            <i class="fas fa-cross text-4xl mb-4 text-red-600"></i>
+            <h3 class="font-bold text-xl mb-2">Jesus Salva</h3>
+            <p class="text-gray-600">Cremos que Jesus Cristo morreu na cruz para nos salvar...</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow-lg text-center">
+            <i class="fas fa-dove text-4xl mb-4 text-yellow-500"></i>
+            <h3 class="font-bold text-xl mb-2">Jesus Batiza</h3>
+            <p class="text-gray-600">Cremos no batismo com o Espírito Santo...</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow-lg text-center">
+            <i class="fas fa-solid fa-trophy text-4xl mb-4 text-blue-400"></i>
+            <h3 class="font-bold text-xl mb-2">Jesus Cura</h3>
+            <p class="text-gray-600">Cremos que Jesus tem o poder de curar...</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow-lg text-center">
+            <i class="fas fa-crown text-4xl mb-4 text-indigo-600"></i>
+            <h3 class="font-bold text-xl mb-2">Jesus Voltará</h3>
+            <p class="text-gray-600">Cremos na segunda vinda de Jesus...</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Programação da semana (visível para todos), mas CRUD apenas admin -->
+    <section id="horarios" class="py-8 mt-6">
+      <div class="flex justify-between items-center mb-4">
+        <div>
+          <h2 class="text-2xl font-bold">Programação da Semana</h2>
+          <p class="text-sm text-gray-600">Veja os eventos semanais</p>
+        </div>
+        <div id="programAdminControls" class="hidden">
+          <button id="btnCreateProgram" class="bg-green-600 text-white px-3 py-2 rounded mr-2">Criar Evento</button>
+        </div>
+      </div>
+
+      <div id="programList" class="grid md:grid-cols-2 gap-4"></div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-8 bg-white rounded-lg p-6 shadow-sm mt-6">
+      <div class="flex justify-between items-center mb-4">
+        <div>
+          <h2 class="text-2xl font-bold">Mural de Fotos</h2>
+          <p class="text-sm text-gray-600">Álbuns e registros</p>
+        </div>
+        <div id="albumsAdminControls" class="hidden">
+          <button id="btnCreateAlbum" class="bg-green-600 text-white px-3 py-2 rounded mr-2">Criar Álbum</button>
+          <button id="btnSampleAlbums" class="bg-indigo-600 text-white px-3 py-2 rounded">Popular (ex.)</button>
+        </div>
+      </div>
+
+      <div id="albumList" class="flex flex-wrap gap-4 mb-6"></div>
+
+      <hr class="my-4">
+
+      <div id="masonry" class="masonry"></div>
+    </section>
 
 
-    <script>
-       
-        const mainSiteContainer = document.getElementById('main-site');
-        const discipleshipContainer = document.getElementById('discipleship-container');
-        const startDiscipleshipBtn = document.getElementById('start-discipleship-btn');
-        const backToMainSiteBtn = document.getElementById('back-to-main-site-btn');
 
-        
-        startDiscipleshipBtn.addEventListener('click', () => {
-            mainSiteContainer.classList.add('hidden');
-            discipleshipContainer.classList.remove('hidden');
-            window.scrollTo(0, 0); 
+    <!-- Membros (admin only) -->
+    <section id="membros" class="py-8 mt-6 hidden">
+      <h2 class="text-2xl font-bold mb-2">Gerenciar Membros</h2>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold mb-2">Importar membros (.xlsx)</h3>
+          <input id="xlsxInput" type="file" accept=".xlsx,.xls" class="mb-2" />
+          <button id="importXlsxBtn" class="bg-amber-600 text-white px-3 py-2 rounded mr-2">Importar Excel</button>
+          <button id="exportCsvBtn" class="bg-gray-100 px-3 py-2 rounded">Exportar CSV</button>
+          <button id="clearMembersBtn" class="bg-red-100 text-red-700 px-3 py-2 rounded ml-2">Limpar (local)</button>
+          <p class="text-xs text-gray-500 mt-2">Planilha: Nome, Email, CPF, Telefone, Endereco, DataNascimento</p>
+        </div>
+
+        <form id="memberForm" class="bg-white p-4 rounded shadow space-y-2">
+          <h3 class="font-semibold">Adicionar membro</h3>
+          <input id="mName" placeholder="Nome completo" class="w-full p-2 border rounded" required />
+          <input id="mEmail" type="email" placeholder="E-mail" class="w-full p-2 border rounded" required />
+          <input id="mCPF" placeholder="CPF" class="w-full p-2 border rounded" required />
+          <input id="mPhone" placeholder="Telefone" class="w-full p-2 border rounded" required />
+          <input id="mAddress" placeholder="Endereço" class="w-full p-2 border rounded" required />
+          <input id="mBirth" type="date" class="w-full p-2 border rounded" required />
+          <div class="flex gap-2">
+            <button type="submit" class="bg-blue-600 text-white px-3 py-2 rounded">Salvar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-4 bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Lista de membros</h3>
+        <div id="membersList" class="max-h-64 overflow-auto space-y-2"></div>
+      </div>
+    </section>
+
+  
+
+    <!-- Aniversariantes -->
+    <section id="aniversariantes" class="py-8 mt-6 bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-bold mb-2">Aniversariantes do mês</h2>
+      <div id="birthdayList" class="space-y-2"></div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16">
+      <div class="container mx-auto px-6">
+         <h2 class="text-2xl font-bold mb-2">Visite-nos</h2>
+        <p class="section-subtitle">Será uma alegria receber você e sua família.</p>
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div class="h-80 rounded-2xl overflow-hidden">
+            <iframe src="https://maps.google.com/maps?q=Rua%2059%2C%2045%20Olaria%202%2C%20Tim%C3%B3teo%20MG&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div>
+            <div class="bg-white p-6 rounded-2xl shadow-xl">
+              <h3 class="font-bold text-2xl mb-2">IEQ Olaria II</h3>
+              <p class="text-gray-600 mb-2"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>Rua 59, nº 45 - Olaria 2, Timóteo - MG</p>
+              <p class="text-gray-600 mb-2"><i class="fas fa-phone mr-2 text-blue-600"></i>(31) 3848-2880</p>
+              <a href="https://www.instagram.com/ieqolaria2/" target="_blank" class="text-pink-600 font-semibold">@ieqolaria2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals root -->
+  <div id="modalRoot" class="hidden"></div>
+
+  <!-- Admin badge visible -->
+  <div id="adminBadgeFloat" class="admin-badge">ADMIN</div>
+
+  <!-- Scripts -->
+  <script>
+  /*************************************************************************
+   * Config
+   **************************************************************************/
+  const ADMIN_PASSWORD = 'admin123'; // altere aqui se desejar
+  const STORAGE_ALBUMS = 'ieq_albums';
+  const STORAGE_MEMBERS = 'ieq_members';
+  const STORAGE_PROGRAM = 'ieq_program';
+
+  /*************************************************************************
+   * Helpers
+   **************************************************************************/
+  function readJSON(key){ try{ return JSON.parse(localStorage.getItem(key) || '[]'); } catch(e){ return []; } }
+  function writeJSON(key, value){ localStorage.setItem(key, JSON.stringify(value)); }
+  function formatBR(iso){ if(!iso) return ''; const d=new Date(iso); if(isNaN(d)) return iso; return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}); }
+
+  /*************************************************************************
+   * Admin UI handling (login, logout)
+   **************************************************************************/
+  const loginModal = document.getElementById('loginModal');
+  const adminPasswordInput = document.getElementById('adminPasswordInput');
+  const adminLoginBtn = document.getElementById('adminLoginBtn');
+  const adminCloseBtn = document.getElementById('adminCloseBtn');
+  const adminBadge = document.getElementById('adminBadge');
+  const navMembros = document.getElementById('navMembros');
+  const mobileNavMembros = document.getElementById('mobileNavMembros');
+  const albumsAdminControls = document.getElementById('albumsAdminControls');
+  const membersSection = document.getElementById('membros');
+  const programAdminControls = document.getElementById('programAdminControls');
+
+  let isAdmin = false;
+  function setAdminMode(on){
+    isAdmin = !!on;
+    // show/hide elements
+    document.getElementById('albumsAdminControls')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('btnCreateAlbum')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('btnSampleAlbums')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('navMembros')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('mobileNavMembros')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('membros')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('albumsAdminControls')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('programAdminControls')?.classList.toggle('hidden', !isAdmin);
+    document.getElementById('adminBadgeFloat').style.display = isAdmin ? 'block' : 'none';
+  }
+
+  adminLoginBtn.addEventListener('click', ()=>{
+    const pw = adminPasswordInput.value || '';
+    if(pw === ADMIN_PASSWORD){
+      setAdminMode(true);
+      loginModal.classList.add('hidden');
+      renderAll();
+      alert('Modo admin ativado.');
+    } else alert('Senha incorreta.');
+  });
+  adminCloseBtn.addEventListener('click', ()=> loginModal.classList.add('hidden'));
+  document.getElementById('btnAdminLogout')?.addEventListener('click', ()=>{
+    setAdminMode(false);
+    alert('Logout do admin realizado.');
+  });
+
+  // mobile menu toggle
+  document.getElementById('mobileMenuBtn').addEventListener('click', ()=> document.getElementById('mobileMenu').classList.toggle('hidden'));
+
+  /*************************************************************************
+   * Modal helpers
+   **************************************************************************/
+  const modalRoot = document.getElementById('modalRoot');
+  function showModal(innerHTML){
+    modalRoot.innerHTML = `<div class="modal-backdrop" id="modalBackdrop"><div class="modal-content relative">${innerHTML}<button id="modalClose" class="absolute top-3 right-3 text-gray-600"><i class="fas fa-times fa-lg"></i></button></div></div>`;
+    modalRoot.classList.remove('hidden');
+    document.getElementById('modalClose').addEventListener('click', hideModal);
+    document.getElementById('modalBackdrop').addEventListener('click', (e)=> { if(e.target.id==='modalBackdrop') hideModal(); });
+  }
+  function hideModal(){ modalRoot.innerHTML=''; modalRoot.classList.add('hidden'); }
+
+  /*************************************************************************
+   * ALBUMS CRUD
+   **************************************************************************/
+  const albumListEl = document.getElementById('albumList');
+  const masonryEl = document.getElementById('masonry');
+  const btnCreateAlbum = document.getElementById('btnCreateAlbum');
+  const btnSampleAlbums = document.getElementById('btnSampleAlbums');
+
+  function loadAlbums(){ return readJSON(STORAGE_ALBUMS); }
+  function saveAlbums(list){ writeJSON(STORAGE_ALBUMS, list); }
+
+  function renderAlbums(){
+    const albums = loadAlbums();
+    albumListEl.innerHTML = '';
+    masonryEl.innerHTML = '';
+    if(!albums.length) albumListEl.innerHTML = '<div class="p-4 text-gray-600">Nenhum álbum criado.</div>';
+    albums.forEach((a, idx) => {
+      const cover = (a.photos && a.photos.length) ? a.photos[0].url : 'https://via.placeholder.com/400x240?text=Álbum';
+      // album card
+      const card = document.createElement('div');
+      card.className = 'album-card';
+      card.innerHTML = `<img src="${cover}" alt="${a.title}"><div class="album-title p-3">${a.title}<div class="text-sm text-gray-500 font-normal">${formatBR(a.date)} • ${(a.photos||[]).length} foto(s)</div></div>`;
+      card.addEventListener('click', ()=> openAlbum(idx));
+      albumListEl.appendChild(card);
+      // show all photos in masonry (optional: show recent photos globally)
+      // we will populate masonry when album opened; for now show recent photos across albums
+    });
+  }
+
+  function openAlbum(index){
+    const albums = loadAlbums();
+    const album = albums[index];
+    if(!album) return;
+    // Build modal content with photos and admin controls (edit/delete)
+    let html = `<div class="p-4"><h3 class="text-2xl font-bold mb-2">${album.title}</h3><p class="text-sm text-gray-600 mb-4">${formatBR(album.date)}</p>`;
+    if(isAdmin){
+      html += `<div class="flex gap-2 mb-4">
+        <button id="btnAddPhotos" class="bg-blue-600 text-white px-3 py-2 rounded">Adicionar Fotos</button>
+        <button id="btnEditAlbum" class="bg-yellow-100 text-yellow-700 px-3 py-2 rounded">Editar Álbum</button>
+        <button id="btnDeleteAlbum" class="bg-red-100 text-red-700 px-3 py-2 rounded">Excluir Álbum</button>
+      </div>`;
+    }
+    // photos grid
+    const photosHtml = (album.photos || []).map((p, i) => `<div class="masonry-item"><img src="${p.url}" alt=""><div class="meta">${p.caption || ''}${isAdmin?` <div class='mt-2'><button data-idx='${i}' class='deletePhotoBtn text-red-600 text-sm'>Excluir foto</button></div>`:''}</div></div>`).join('');
+    html += `<div class="columns-2 md:columns-3 gap-2">${photosHtml || '<p class="text-gray-600">Nenhuma foto.</p>'}</div>`;
+    html += `</div>`;
+    showModal(html);
+
+    // bind admin buttons
+    if(isAdmin){
+      document.getElementById('btnAddPhotos').addEventListener('click', ()=> showAddPhotosModal(index));
+      document.getElementById('btnEditAlbum').addEventListener('click', ()=> showEditAlbumModal(index));
+      document.getElementById('btnDeleteAlbum').addEventListener('click', ()=>{
+        if(!confirm('Excluir álbum?')) return;
+        const arr = loadAlbums(); arr.splice(index,1); saveAlbums(arr); renderAlbums(); hideModal();
+      });
+      // photo delete buttons
+      document.querySelectorAll('.deletePhotoBtn').forEach(btn=>{
+        btn.addEventListener('click',(e)=>{
+          const pidx = parseInt(e.target.dataset.idx,10);
+          if(!confirm('Excluir foto?')) return;
+          const arr = loadAlbums();
+          arr[index].photos.splice(pidx,1);
+          saveAlbums(arr);
+          openAlbum(index); // refresh modal
         });
+      });
+    }
+  }
 
-        backToMainSiteBtn.addEventListener('click', () => {
-            discipleshipContainer.classList.add('hidden');
-            mainSiteContainer.classList.remove('hidden');
-            window.scrollTo(0, 0); 
-        });
+  // create album via modal (title + date)
+  btnCreateAlbum?.addEventListener('click', ()=>{
+    if(!isAdmin){ alert('Somente admin'); return; }
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Criar Álbum</h3>
+      <input id="newAlbumTitle" placeholder="Título do álbum" class="w-full p-2 border rounded mb-2"/>
+      <input id="newAlbumDate" type="date" class="w-full p-2 border rounded mb-4"/>
+      <div class="flex gap-2"><button id="saveNewAlbum" class="bg-green-600 text-white px-3 py-2 rounded">Criar</button><button id="cancelNewAlbum" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelNewAlbum').addEventListener('click', hideModal);
+    document.getElementById('saveNewAlbum').addEventListener('click', ()=>{
+      const title = document.getElementById('newAlbumTitle').value.trim();
+      const date = document.getElementById('newAlbumDate').value || new Date().toISOString();
+      if(!title){ alert('Informe título'); return; }
+      const arr = loadAlbums();
+      arr.push({ title, date, photos: [] });
+      saveAlbums(arr); renderAlbums(); hideModal(); alert('Álbum criado');
+    });
+  });
+
+  // edit album
+  function showEditAlbumModal(index){
+    const arr = loadAlbums(); const a = arr[index];
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Editar Álbum</h3>
+      <input id="editAlbumTitle" value="${(a.title||'').replace(/"/g,'&quot;')}" class="w-full p-2 border rounded mb-2"/>
+      <input id="editAlbumDate" type="date" value="${a.date? a.date.split('T')[0] : ''}" class="w-full p-2 border rounded mb-4"/>
+      <div class="flex gap-2"><button id="saveEditAlbum" class="bg-blue-600 text-white px-3 py-2 rounded">Salvar</button><button id="cancelEditAlbum" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelEditAlbum').addEventListener('click', hideModal);
+    document.getElementById('saveEditAlbum').addEventListener('click', ()=>{
+      const title = document.getElementById('editAlbumTitle').value.trim();
+      const date = document.getElementById('editAlbumDate').value || a.date;
+      if(!title) { alert('Título obrigatório'); return; }
+      arr[index].title = title; arr[index].date = date;
+      saveAlbums(arr); renderAlbums(); hideModal(); alert('Álbum atualizado');
+    });
+  }
+
+  // add multiple photos to album
+  function showAddPhotosModal(albumIndex){
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Adicionar várias fotos</h3>
+      <input id="photosFiles" type="file" accept="image/*" multiple class="w-full mb-2"/>
+      <input id="photosCaption" placeholder="Legenda comum (opcional)" class="w-full p-2 border rounded mb-3"/>
+      <div class="flex gap-2"><button id="sendPhotosBtn" class="bg-green-600 text-white px-3 py-2 rounded">Enviar</button><button id="cancelPhotos" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelPhotos').addEventListener('click', hideModal);
+    document.getElementById('sendPhotosBtn').addEventListener('click', async ()=>{
+      const filesEl = document.getElementById('photosFiles');
+      const caption = document.getElementById('photosCaption').value.trim();
+      if(!filesEl.files || filesEl.files.length===0){ alert('Selecione imagens'); return; }
+      const arr = loadAlbums();
+      if(!arr[albumIndex]){ alert('Álbum não encontrado'); hideModal(); return; }
+      const files = Array.from(filesEl.files);
+      const urls = await Promise.all(files.map(f=>fileToDataURL(f)));
+      urls.forEach(u => arr[albumIndex].photos.push({ url:u, caption }));
+      saveAlbums(arr); hideModal(); openAlbum(albumIndex);
+    });
+  }
+
+  function fileToDataURL(file){ return new Promise((res, rej)=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.onerror=rej; fr.readAsDataURL(file); }); }
+
+  // sample albums
+  btnSampleAlbums?.addEventListener('click', ()=>{
+    if(!isAdmin){ alert('Somente admin'); return; }
+    const sample = [
+      { title:'Culto de Domingo', date:new Date().toISOString(), photos:[ {url:'https://picsum.photos/800/600?random=101', caption:'Louvor'}, {url:'https://picsum.photos/600/800?random=102', caption:'Oração'} ] },
+      { title:'Acampamento', date:new Date().toISOString(), photos:[ {url:'https://picsum.photos/700/700?random=111', caption:'Fogueira'} ] }
+    ];
+    saveAlbums(sample); renderAlbums(); alert('Álbuns de exemplo adicionados.');
+  });
+
+  /*************************************************************************
+   * PROGRAM (CRUD) - option B: day, time, description
+   **************************************************************************/
+  const programListEl = document.getElementById('programList');
+  const btnCreateProgram = document.getElementById('btnCreateProgram');
+
+  function loadProgram(){ return readJSON(STORAGE_PROGRAM); }
+  function saveProgram(list){ writeJSON(STORAGE_PROGRAM, list); }
+
+  function renderProgram(){
+    const list = loadProgram();
+    programListEl.innerHTML = '';
+    if(!list.length) programListEl.innerHTML = '<div class="p-4 text-gray-600">Nenhum evento na programação.</div>';
+    list.forEach((ev, idx)=> {
+      const card = document.createElement('div');
+      card.className = 'bg-white p-4 rounded shadow';
+      card.innerHTML = `<div class="flex justify-between items-start"><div><div class="font-bold">${ev.day} • ${ev.time}</div><div class="text-gray-700 mt-1">${ev.title}</div><div class="text-sm text-gray-500 mt-1">${ev.description}</div></div><div>${isAdmin? `<button data-idx="${idx}" class="editProgBtn text-yellow-600 mr-2">Editar</button><button data-idx="${idx}" class="deleteProgBtn text-red-600">Excluir</button>` : ''}</div></div>`;
+      programListEl.appendChild(card);
+    });
+    // bind admin buttons
+    document.querySelectorAll('.editProgBtn').forEach(btn=> btn.addEventListener('click', e=>{
+      const idx = parseInt(e.target.dataset.idx,10);
+      showEditProgramModal(idx);
+    }));
+    document.querySelectorAll('.deleteProgBtn').forEach(btn=> btn.addEventListener('click', e=>{
+      const idx = parseInt(e.target.dataset.idx,10);
+      if(!confirm('Excluir evento?')) return;
+      const arr = loadProgram(); arr.splice(idx,1); saveProgram(arr); renderProgram();
+    }));
+  }
+  function loginAdmin() {
+  const senha = document.getElementById("adminPassword").value;
+  if (senha === senhaCorreta) {
+
+    isAdmin = true;
+
+    // Oculta completamente o modal
+    const modal = document.getElementById("loginModal");
+    modal.classList.add("hidden");
+    modal.style.display = "none";
+
+    // Mostra menus do admin
+    document.getElementById("menuAdminMembros").classList.remove("hidden");
+    document.getElementById("menuAdminAlbuns").classList.remove("hidden");
+    document.getElementById("programacaoAdmin").classList.remove("hidden");
+
+  } else {
+    alert("Senha incorreta.");
+  }
+}
 
 
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
+  btnCreateProgram?.addEventListener('click', ()=>{
+    if(!isAdmin){ alert('Somente admin'); return; }
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Criar Evento</h3>
+      <select id="progDay" class="w-full p-2 border rounded mb-2">
+        <option>Segunda</option><option>Terça</option><option>Quarta</option><option>Quinta</option><option>Sexta</option><option>Sábado</option><option>Domingo</option>
+      </select>
+      <input id="progTime" type="time" class="w-full p-2 border rounded mb-2"/>
+      <input id="progTitle" placeholder="Título" class="w-full p-2 border rounded mb-2"/>
+      <textarea id="progDesc" placeholder="Descrição" class="w-full p-2 border rounded mb-2"></textarea>
+      <div class="flex gap-2"><button id="saveProgBtn" class="bg-green-600 text-white px-3 py-2 rounded">Salvar</button><button id="cancelProg" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelProg').addEventListener('click', hideModal);
+    document.getElementById('saveProgBtn').addEventListener('click', ()=>{
+      const day = document.getElementById('progDay').value;
+      const time = document.getElementById('progTime').value;
+      const title = document.getElementById('progTitle').value.trim();
+      const description = document.getElementById('progDesc').value.trim();
+      if(!day || !time || !title){ alert('Preencha dia, horário e título'); return; }
+      const arr = loadProgram();
+      arr.push({ day, time, title, description });
+      saveProgram(arr); renderProgram(); hideModal(); alert('Evento criado');
+    });
+  });
 
-      
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); 
+  function showEditProgramModal(index){
+    if(!isAdmin) return;
+    const arr = loadProgram(); const ev = arr[index];
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Editar Evento</h3>
+      <select id="editProgDay" class="w-full p-2 border rounded mb-2">
+        <option ${ev.day==='Segunda'?'selected':''}>Segunda</option><option ${ev.day==='Terça'?'selected':''}>Terça</option><option ${ev.day==='Quarta'?'selected':''}>Quarta</option><option ${ev.day==='Quinta'?'selected':''}>Quinta</option><option ${ev.day==='Sexta'?'selected':''}>Sexta</option><option ${ev.day==='Sábado'?'selected':''}>Sábado</option><option ${ev.day==='Domingo'?'selected':''}>Domingo</option>
+      </select>
+      <input id="editProgTime" type="time" value="${ev.time||''}" class="w-full p-2 border rounded mb-2"/>
+      <input id="editProgTitle" value="${(ev.title||'').replace(/"/g,'&quot;')}" class="w-full p-2 border rounded mb-2"/>
+      <textarea id="editProgDesc" class="w-full p-2 border rounded mb-2">${(ev.description||'').replace(/</g,'&lt;')}</textarea>
+      <div class="flex gap-2"><button id="saveEditProg" class="bg-blue-600 text-white px-3 py-2 rounded">Salvar</button><button id="cancelEditProg" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelEditProg').addEventListener('click', hideModal);
+    document.getElementById('saveEditProg').addEventListener('click', ()=>{
+      const day = document.getElementById('editProgDay').value;
+      const time = document.getElementById('editProgTime').value;
+      const title = document.getElementById('editProgTitle').value.trim();
+      const description = document.getElementById('editProgDesc').value.trim();
+      if(!day||!time||!title){ alert('Preencha campos'); return; }
+      arr[index] = { day, time, title, description };
+      saveProgram(arr); renderProgram(); hideModal();
+    });
+  }
 
-        const lessons = [
-            {
-                title: "Carta de Boas-Vindas",
-                content: `
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Carta de Boas-Vindas </h2>
-                    <p class="mb-4 text-lg">Paz seja convosco,</p>
-                    <p class="mb-4 text-lg">Que alegria imensa ter você conosco! Saiba que a sua decisão de aprofundar-se na Palavra e na *Declaração de Fé da Igreja do Evangelho Quadrangular* é um passo valioso e que o céu celebra.</p>
+  /*************************************************************************
+   * MEMBERS CRUD + Excel import + Export CSV
+   **************************************************************************/
+  const membersListEl = document.getElementById('membersList');
+  const memberForm = document.getElementById('memberForm');
+  const xlsxInput = document.getElementById('xlsxInput');
+  const importXlsxBtn = document.getElementById('importXlsxBtn');
+  const exportCsvBtn = document.getElementById('exportCsvBtn');
+  const clearMembersBtn = document.getElementById('clearMembersBtn');
 
-                    <p class="mb-4 text-lg">Esta apostila foi preparada com muito carinho e dedicação. Mais do que um simples material de estudo, ela é um guia feito para te acompanhar em uma jornada de descobertas. Página por página, você terá a oportunidade de mergulhar nos fundamentos da nossa fé, compreendendo o que acreditamos, os princípios que nos guiam e o propósito que nos move como igreja.</p>
+  function loadMembers(){ return readJSON(STORAGE_MEMBERS); }
+  function saveMembers(list){ writeJSON(STORAGE_MEMBERS, list); }
 
-                    <p class="mb-4 text-lg">Nosso desejo é que cada lição seja uma fonte de inspiração, um convite para fortalecer seu relacionamento com Deus e uma oportunidade de crescimento espiritual. Que você encontre aqui um alicerce sólido para a sua fé e um motivo a mais para celebrar a vida abundante que Cristo nos oferece.</p>
+  function renderMembers(){
+    const list = loadMembers();
+    membersListEl.innerHTML = '';
+    if(!list.length) membersListEl.innerHTML = '<div class="p-3 text-gray-600">Nenhum membro cadastrado.</div>';
+    list.forEach((m, idx)=>{
+      const div = document.createElement('div'); div.className='p-3 rounded bg-white shadow flex justify-between items-start';
+      div.innerHTML = `<div><strong>${m.Nome||m.name}</strong><div class="text-sm text-gray-600">${m.Email||m.email} • ${m.Telefone||m.telefone||m.phone||''}</div><div class="text-sm mt-1 text-gray-700">${m.Endereco||m.endereco||''} • ${m.DataNascimento||m.data||''}</div></div><div><button data-idx="${idx}" class="editMemberBtn text-yellow-600 mr-2">Editar</button><button data-idx="${idx}" class="deleteMemberBtn text-red-600">Excluir</button></div>`;
+      membersListEl.appendChild(div);
+    });
+    // bind buttons
+    document.querySelectorAll('.deleteMemberBtn').forEach(btn=> btn.addEventListener('click', e=>{
+      const idx = parseInt(e.target.dataset.idx,10);
+      if(!confirm('Remover membro?')) return;
+      const arr = loadMembers(); arr.splice(idx,1); saveMembers(arr); renderMembers(); renderBirthdays();
+    }));
+    document.querySelectorAll('.editMemberBtn').forEach(btn=> btn.addEventListener('click', e=>{
+      const idx = parseInt(e.target.dataset.idx,10); showEditMemberModal(idx);
+    }));
+    renderBirthdays();
+  }
 
-                    <p class="mb-4 text-lg">Estamos aqui para caminhar com você, e nosso maior sonho é ver a sua vida florescer ainda mais na presença de Deus.</p>
+  // add member via form
+  memberForm?.addEventListener('submit', (ev)=>{
+    ev.preventDefault();
+    const name = document.getElementById('mName').value.trim();
+    const email = document.getElementById('mEmail').value.trim();
+    const cpf = document.getElementById('mCPF').value.trim();
+    const phone = document.getElementById('mPhone').value.trim();
+    const address = document.getElementById('mAddress').value.trim();
+    const birth = document.getElementById('mBirth').value;
+    if(!name||!email||!cpf||!phone||!address||!birth){ alert('Preencha todos os campos'); return; }
+    const arr = loadMembers(); arr.push({ Nome:name, Email:email, CPF:cpf, Telefone:phone, Endereco:address, DataNascimento:birth }); saveMembers(arr); memberForm.reset(); renderMembers(); alert('Membro salvo.');
+  });
 
-                    <p class="mb-4 text-lg">Com carinho,</p>
+  // edit member modal
+  function showEditMemberModal(index){
+    const arr = loadMembers(); const m = arr[index];
+    showModal(`<div class="p-4">
+      <h3 class="text-xl font-bold mb-2">Editar Membro</h3>
+      <input id="editMName" class="w-full p-2 border rounded mb-2" value="${(m.Nome||'').replace(/"/g,'&quot;')}"/>
+      <input id="editMEmail" class="w-full p-2 border rounded mb-2" value="${(m.Email||'').replace(/"/g,'&quot;')}"/>
+      <input id="editMCPF" class="w-full p-2 border rounded mb-2" value="${(m.CPF||'').replace(/"/g,'&quot;')}"/>
+      <input id="editMPhone" class="w-full p-2 border rounded mb-2" value="${(m.Telefone||'').replace(/"/g,'&quot;')}"/>
+      <input id="editMAddress" class="w-full p-2 border rounded mb-2" value="${(m.Endereco||'').replace(/"/g,'&quot;')}"/>
+      <input id="editMBirth" type="date" class="w-full p-2 border rounded mb-2" value="${(m.DataNascimento||'').split('T')[0]||''}"/>
+      <div class="flex gap-2"><button id="saveEditMember" class="bg-blue-600 text-white px-3 py-2 rounded">Salvar</button><button id="cancelEditMember" class="bg-gray-100 px-3 py-2 rounded">Cancelar</button></div>
+    </div>`);
+    document.getElementById('cancelEditMember').addEventListener('click', hideModal);
+    document.getElementById('saveEditMember').addEventListener('click', ()=>{
+      const name = document.getElementById('editMName').value.trim();
+      const email = document.getElementById('editMEmail').value.trim();
+      const cpf = document.getElementById('editMCPF').value.trim();
+      const phone = document.getElementById('editMPhone').value.trim();
+      const address = document.getElementById('editMAddress').value.trim();
+      const birth = document.getElementById('editMBirth').value;
+      if(!name||!email||!cpf||!phone||!address||!birth){ alert('Preencha todos os campos'); return; }
+      arr[index] = { Nome:name, Email:email, CPF:cpf, Telefone:phone, Endereco:address, DataNascimento:birth };
+      saveMembers(arr); hideModal(); renderMembers(); renderBirthdays();
+    });
+  }
 
-                    <p class="mb-4 text-lg">Dos seus Pastores,</p>
+  // Excel import
+  importXlsxBtn?.addEventListener('click', ()=>{
+    const file = xlsxInput.files && xlsxInput.files[0]; if(!file){ alert('Selecione arquivo .xlsx'); return; }
+    const fr = new FileReader();
+    fr.onload = function(e){
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type:'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const rows = XLSX.utils.sheet_to_json(sheet, { defval:'' });
+      if(!rows.length) { alert('Planilha vazia'); return; }
+      const mapped = rows.map(r => ({
+        Nome: r.Nome || r.nome || r.Name || r.name || '',
+        Email: r.Email || r.email || '',
+        CPF: r.CPF || r.cpf || '',
+        Telefone: r.Telefone || r.telefone || r.Phone || r.phone || '',
+        Endereco: r.Endereco || r.endereco || r.Address || r.address || '',
+        DataNascimento: r.DataNascimento || r.dataNascimento || r.data || r.DataNascimento || ''
+      }));
+      const existing = loadMembers(); const combined = existing.concat(mapped);
+      saveMembers(combined); renderMembers(); alert(`Importados ${mapped.length} membros.`);
+    };
+    fr.readAsArrayBuffer(file);
+  });
 
+  // export CSV
+  exportCsvBtn?.addEventListener('click', ()=>{
+    const members = loadMembers(); if(!members.length) { alert('Nenhum membro'); return; }
+    const header = ['Nome','Email','CPF','Telefone','Endereco','DataNascimento'];
+    const rows = members.map(m => [m.Nome||'', m.Email||'', m.CPF||'', m.Telefone||'', m.Endereco||'', m.DataNascimento||'']);
+    const csv = [header, ...rows].map(r => r.map(cell => `"${String(cell).replace(/"/g,'""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], { type:'text/csv;charset=utf-8;' }); const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = 'membros.csv'; a.click(); URL.revokeObjectURL(url);
+  });
 
-                    <p class="font-semibold text-lg">Com amor,<br>Dos seus Pastores,<br>Pr. Deywson e Pra Sonia Andrade</p>
-                `
-            },
-            {
-                title: "Denominação",
-                objective: "A VISÃO QUADRANGULAR:",
-                content: `
-                    <p class="mb-4 text-lg">O termo Quadrangular é um termo bíblico usado para o Tabernáculo, no livro de Êxodo; para o Templo do Senhor, em Ezequiel 40:47; e para o Céu, no livro de Apocalipse. O termo "Evangelho Quadrangular" foi dado à fundadora Aimée Semple McPherson em inspiração pelo avivamento, durante uma campanha evangelística em Oakland, Califórnia, no ano de 1922, enquanto pregava sobre a visão de Ezequiel (Ez 1:1-10).</p>
+  // clear members
+  clearMembersBtn?.addEventListener('click', ()=> {
+    if(!confirm('Apagar TODOS os membros (localStorage)?')) return;
+    localStorage.removeItem(STORAGE_MEMBERS); renderMembers(); renderBirthdays();
+  });
 
-                    <p class="mb-4 text-lg">"Evangelho Quadrangular" representa aquilo que é igualmente equilibrado por todos os lados, estabelecido e resistente. Tal confiança no poder do evangelho é expressa em Hebreus 13:8, o que é apresentado nas igrejas quadrangulares como "Jesus Cristo é o mesmo ontem, hoje e será eternamente".</p>
+  /*************************************************************************
+   * Birthdays (visible to all)
+   **************************************************************************/
+  const birthdayListEl = document.getElementById('birthdayList');
+  function renderBirthdays(){
+    const members = loadMembers();
+    const month = new Date().getMonth();
+    const birthdays = members.filter(m => {
+      const d = new Date(m.DataNascimento || m.data || '');
+      return !isNaN(d) && d.getMonth() === month;
+    });
+    birthdayListEl.innerHTML = '';
+    if(!birthdays.length){ birthdayListEl.innerHTML = '<p class="text-gray-600">Não há aniversariantes este mês.</p>'; return; }
+    birthdays.sort((a,b)=> new Date(a.DataNascimento || a.data) - new Date(b.DataNascimento || b.data));
+    birthdays.forEach(b=>{
+      const d = new Date(b.DataNascimento || b.data); const day = d.getDate(); const monthName = d.toLocaleString('pt-BR',{month:'long'});
+      const el = document.createElement('div'); el.className='p-3 rounded bg-gray-50 flex justify-between'; el.innerHTML = `<div><strong>${b.Nome||b.name}</strong><div class="text-sm text-gray-600">${b.Email||''} • ${b.Telefone||''}</div></div><div class="text-sm">${day} de ${monthName}</div>`;
+      birthdayListEl.appendChild(el);
+    });
+  }
 
-                    <p class="mb-4 text-lg">O termo ainda representa os 4 pilares do ministério de Jesus na Terra:</p>
-                    <h3 class="text-2xl font-bold mb-3 mt-6">QUATRO ROSTOS</h3>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><b>1 - Rosto de Homem: </b> Simboliza Jesus Cristo filho do homem, como salvador que foi sacrificado por nós.</li>
-                        <li><b>2 - Rosto de Leão: </b> Simboliza Jesus Cristo, como batizador no Espírito Santo, porque representa força e poder.</li>
-                        <li><b>3 - Rosto de Boi: </b> Simboliza um animal suportador de cargas, Jesus veio para levar sobre Ele toda a carga de pecados, vergonha e doenças.</li>
-                        <li><b>4- Rosto de Águia: </b> Simboliza o rei dos pássaros, como Jesus simboliza o rei que há de vir.</li>
-                    </ul>
+  /*************************************************************************
+   * Utils & Init
+   **************************************************************************/
+  // open album function exposed (if needed)
+  window.openAlbum = openAlbum;
 
-                    <h3 class="text-2xl font-bold mb-3 mt-6">QUATRO CORES</h3>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><b>1 - Vermelho: </b> Simboliza o sangue de Cristo que foi derramado na Cruz para nos trazer Salvação.</li>
-                        <li><b>2 - Amarelo: </b> Simboliza o batismo no Espírito Santo.</li>
-                        <li><b>3 - Azul: </b> Simboliza a cura divina.</li>
-                        <li><b>4- Roxo: </b> Simboliza a volta do Rei Jesus.</li>
-                    </ul>
+  function renderAll(){
+    renderAlbums(); renderProgram(); renderMembers(); renderBirthdays();
+  }
 
-                    <h3 class="text-2xl font-bold mb-3 mt-6">QUATRO SÍMBOLOS</h3>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><b>1 - Cruz: </b> Simboliza a morte de Cristo, para nos dar a Salvação.</li>
-                        <li><b>2 - Pomba: </b> Simboliza o batismo no Espírito Santo.</li>
-                        <li><b>3 - Cálice: </b> Simboliza a cura divina.</li>
-                        <li><b>4 - Coroa:  </b> Simboliza a volta de Cristo para reinar eternamente.</li>
-                    </ul>
+  // initial sample data (only if no data)
+  (function seedIfEmpty(){
+    if(!readJSON(STORAGE_ALBUMS).length) {
+      // no seed by default - admin can add sample via button
+    }
+    if(!readJSON(STORAGE_PROGRAM).length) {
+      const sampleProg = [
+        { day:'Domingo', time:'08:00', title:'Culto de Domingo', description:'Louvor e Palavra' },
+        { day:'Quarta', time:'19:30', title:'Quarta de Oração', description:'Tempo de busca' }
+      ];
+      writeJSON(STORAGE_PROGRAM, sampleProg);
+    }
+    if(!readJSON(STORAGE_MEMBERS).length) {
+      // do not seed members (avoid dummy Ana)
+    }
+  })();
 
-                    <h3 class="text-2xl font-bold mb-3 mt-6">QUATRO EVANGELHOS NO NOVO TESTAMENTO</h3>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><b>1 - Mateus: </b>Mateus escreveu este livro para os Hebreus que há esperavam pelo Messias que viria para reinar eternamente. Por isso, o evangelista apresenta Jesus como Rei que há de vir para buscar a igreja.</li>
-                        <li><b>2 - Marcos:  </b> Marcos escreveu este livro aos romanos, que era um povo militar tinha orgulho em obedecer a seus superiores, destacando Jesus como servo diante de Deus para tomar sobre si as nossas dores.</li>
-                        <li><b>3 - Lucas:  </b> Lucas escreveu este livro aos Gregos, um povo cujo ideal era o homem perfeito Então apresenta Jesus como filho do homem, perfeito, corpo, alma e espírito, veio para buscar o que se havia perdido.</li>
-                        <li><b>4- João:  </b> João escreveu este livro para todos os cristãos apresentando Jesus como filho de Deus o único que pode batizar com o Espírito Santo.</li>
-                    </ul>
+  // initial render
+  window.addEventListener('load', ()=> { setAdminMode(false); renderAll(); });
 
-                `
-            },
-            {
-                title: "Lição 1: AS SAGRADAS ESCRITURAS",
-                
-                content: `
-                    
-                    <h3 class="text-2xl font-bold mb-3 mt-6">Cremos que a Bíblia Sagrada é a</h3>
-                    <p class="mb-4"> (1) Palavra do Deus Vivo; Verdadeira, imutável, firme, inabalável, como seu autor, o Senhor Jeová; que foi escrita por santos homens do passado, </p>
-                    <p class="mb-4">(2)conforme eram movidos pelo Espírito Santo e por Ele inspirados; que ela é uma</p>
-                    <p class="mb-4">(3)lâmpada acesa para guiar um mundo perdido, desde as profundezas do pecado e tristeza até as elevações da honradez e da glória; um espelho claro que revela a face de um Salvador crucificado; um prumo a tornar reta a vida de cada indivíduo ou comunidade; uma </p>
-                    <p class="mb-4">(4) afiada espada de dois gumes para convencer do pecado e maldade; um forte elo de amor e ternura para levar os arrependidos a Cristo Jesus; um bálsamo, sob o sopro do</li></p>
-                    <p class="mb-4"(5) Espírito Santo, que pode curar e vivificar todo o coração desfalecente; único sustentáculo verdadeiro da comunhão e unidade cristã.</p>
-                    <p class="mb-4">(6) Apelo de amor de um Deus infinitamente amantíssimo; advertência solene, trovejar distante da tempestade e da ira e retribuição que caira sobre os desatentos; uma</p>
-                    <p class="mb-4">(7) seta apontada para o céu; um sinal de perigo que adverte quanto ao inferno,</p>
-                    <p class="mb-4">(8) o divino, supremo e eterno tribunal por cujos padrões todos os homens, nações, credos e argumentos serão julgados</p>
-                    
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 2: A DIVINDADE ETERNA",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                    <blockquote class="border-l-4 border-red-500 pl-4 py-2 my-4 bg-red-50 text-gray-700">
-                        “Se com a tua boca confessares ao Senhor Jesus, e em teu coração creres que Deus o ressuscitou dentre os mortos, serás salvo.” (Romanos 10:9).
-                    </blockquote>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 3: A QUEDA DO HOMEM",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
+  // logout button
+  document.getElementById('btnAdminLogout')?.addEventListener('click', ()=>{
+    setAdminMode(false); alert('Logout efetuado'); location.reload();
+  });
 
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 4: O PLANO DE REDENÇÃO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 5: SALVAÇÃO PELA GRAÇA",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 6: ARREPENDIMENTO E ACEITAÇÃO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 7: O NOVO NASCIMENTO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 8: VIDA CRISTÃ DIÁRIA",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-
-                                 
-                ]
-            },
-            {
-                title: "Lição 9: BATISMO E SANTA CEIA",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                    
-                `,
-                questions: [
-                    "",
-                    "",
-
-                                 
-                ]
-            },
-            {
-                title: "Lição 10: BATISMO NO ESPÍRITO SANTO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 11:A VIDA CHEIA DO ESPÍRITO SANTO",
-                
-                content: `
-                   <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
- 
-                                 
-                ]
-            },
-            {
-                title: "Lição 12: OS DONS E FRUTOS DO ESPÍRITO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 13: MODERAÇÃO",
-               
-                content: `
-                   <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                                 
-                ]
-            },
-            {
-                title: "Lição 14: CURA DIVINA",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-
-                                 
-                ]
-            },
-            {
-                title: "Lição 15: A SEGUNDA VINDA DE CRISTO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 16: RELAÇÕES PARA COM A IGREJA",
-                
-                content: `
-                   <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 17: GOVERNO CIVIL",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 18: O JUIZO FINAL",
-                
-                content: `
-                   <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 19: O CÉU",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                    "",
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 20: O INFERNO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 21: EVANGELISMO",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 22: DÍZIMOS E OFERTAS",
-                
-                content: `
-                    <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-
-                    "",
-                    ""
-                                 
-                ]
-            },
-            {
-                title: "Lição 23: MEMBROS",
-                
-                content: `
-                   <p class="mb-4"> texto </p>
-                `,
-                questions: [
-                    "",
-                    "",
-                    "",
-                    "",
-
-                    "",
-                    ""
-                                 
-                ]
-            }
-        ];
-
-        let currentLessonIndex = 0;
-        const contentArea = document.getElementById('content-area');
-        const lessonMenu = document.getElementById('lesson-menu');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const progressIndicator = document.getElementById('progress-indicator');
-
-        function renderLesson(index) {
-            if (index < 0 || index >= lessons.length) return;
-            currentLessonIndex = index;
-            const lesson = lessons[index];
-            
-            let html = `<div class="content-fade-in flex-grow">`;
-            if(lesson.title !== "Carta de Boas-Vindas") {
-                html += `<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">${lesson.title}</h1>`;
-            }
-            if(lesson.objective) {
-                html += `<p class="text-md text-red-600 font-medium mb-6">${lesson.objective}</p>`;
-            }
-            html += `<div class="prose max-w-none text-gray-700 text-lg leading-relaxed">${lesson.content}</div>`;
-            if (lesson.questions) {
-                html += `<div class="mt-10 pt-6 border-t-2 border-gray-200">
-                            <h4 class="text-xl font-bold mb-4 text-gray-800">Referências Bíblicas</h4>
-                            <ul class="space-y-3 list-decimal list-inside">`;
-                lesson.questions.forEach(q => {
-                    html += `<li class="text-gray-700">${q}</li>`;
-                });
-                html += `</ul></div>`;
-            }
-            html += `</div>`;
-            contentArea.innerHTML = html;
-            updateNavigation();
-            updateMenu();
-        }
-
-        function updateNavigation() {
-            prevBtn.disabled = currentLessonIndex === 0;
-            nextBtn.disabled = currentLessonIndex === lessons.length - 1;
-            prevBtn.classList.toggle('opacity-50', prevBtn.disabled);
-            prevBtn.classList.toggle('cursor-not-allowed', prevBtn.disabled);
-            nextBtn.classList.toggle('opacity-50', nextBtn.disabled);
-            nextBtn.classList.toggle('cursor-not-allowed', nextBtn.disabled);
-            progressIndicator.textContent = `Lição ${currentLessonIndex + 1} de ${lessons.length}`;
-        }
-
-        function updateMenu() {
-            const menuItems = lessonMenu.querySelectorAll('button');
-            menuItems.forEach((item, index) => {
-                if (index === currentLessonIndex) {
-                    item.classList.add('bg-red-100', 'text-red-700', 'font-bold');
-                    item.classList.remove('text-gray-600', 'hover:bg-gray-100');
-                } else {
-                    item.classList.remove('bg-red-100', 'text-red-700', 'font-bold');
-                    item.classList.add('text-gray-600', 'hover:bg-gray-100');
-                }
-            });
-        }
-
-        function populateMenu() {
-            if (lessonMenu.children.length > 0) return; 
-            lessons.forEach((lesson, index) => {
-                const button = document.createElement('button');
-                button.className = 'w-full text-left py-2 px-4 rounded-lg transition-colors duration-200 text-gray-600 hover:bg-gray-100 font-medium';
-                button.textContent = lesson.title;
-                button.onclick = () => renderLesson(index);
-                lessonMenu.appendChild(button);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentLessonIndex > 0) renderLesson(currentLessonIndex - 1);
-        });
-        nextBtn.addEventListener('click', () => {
-            if (currentLessonIndex < lessons.length - 1) renderLesson(currentLessonIndex + 1);
-        });
-        
-
-        startDiscipleshipBtn.addEventListener('click', () => {
-            populateMenu();
-            renderLesson(0);
-        });
-    </script>
+  </script>
 </body>
-
-
+</html>
